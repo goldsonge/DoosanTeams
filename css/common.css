@@ -63,6 +63,9 @@ header div a:hover {
     border-bottom: 3px solid #005eb8;
     transition: all 0.1s linear;
 }
+header .ham_menu {
+    display: none;
+}
 main {
     font-size: 0;
 }

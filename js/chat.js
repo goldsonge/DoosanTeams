@@ -209,3 +209,31 @@ checklistContainers.forEach(container => {
     // 초기 카운터 상태 설정
     updateCounter();
 });
+
+// 채팅 영역 하단 채팅 입력 인풋 스타일 스크립트
+// input 요소 선택
+const chatInput = document.querySelector('input[name="chat_sand"]');
+const sandBox = document.querySelector('.sand_box');
+
+// input에 포커스가 되면 sand_box에 클래스 추가
+chatInput.addEventListener('focus', () => {
+    sandBox.classList.add('act');
+});
+
+// input에서 포커스가 해제되면 sand_box에서 클래스 제거
+chatInput.addEventListener('blur', () => {
+    sandBox.classList.remove('act');
+});
+
+// 채팅 영역 햄버거 메뉴 스크립트
+// 햄버거 메뉴 요소 선택
+const hamburgerMenu = document.querySelector('.ham_menu');
+
+// 클릭 시 햄버거 메뉴와 body에 클래스 추가/제거 (토글)
+hamburgerMenu.addEventListener('click', () => {
+    // 햄버거 메뉴에 active 클래스 토글
+    hamburgerMenu.classList.toggle('active');
+    
+    // body에 ham_on, ham_off 클래스 토글
+    document.body.classList.toggle('ham_act');
+});

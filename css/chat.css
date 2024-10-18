@@ -46,6 +46,7 @@
     color: #848f9a;
     margin-bottom: 1rem;
 }
+
 /* chat_history - Today */
 .chat_history .cont.n1 .chat_cont {
     border-radius: .4rem;
@@ -63,6 +64,7 @@
 .chat_history .cont.n1 .chat_cont .r_box .date {
     color: #005eb8;
 }
+
 /* chat_history - Today 그 외 */
 .chat_history .chat_cont {
     justify-content: space-between;
@@ -184,7 +186,6 @@
     line-height: 1.17;
     margin-top: 1rem;
 }
-
 .chat_start .t_box .t_cont .sub_txt {
     font-size: 1.6rem;
     line-height: 1.75;
@@ -211,7 +212,6 @@
     margin-bottom: 2rem;
     font-weight: bold;
 }
-
 .chat_start .checklist {
     padding-right: .5rem;
     height: calc(100% - 1.7rem);
@@ -254,14 +254,12 @@
 .chat_start .checklist li.checked.type02 input[type="checkbox"]:checked {
     background: url(../img/chek_on_02.png) 0 0 no-repeat;
 }
-
 .chat_start label {
     cursor: pointer;
     user-select: none;
     white-space: nowrap;
     line-height: 1.75;
 }
-
 .chat_start input[type="checkbox"] {
     appearance: none;
     background: url(../img/chek_off.png) 0 0 no-repeat;
@@ -272,18 +270,18 @@
     cursor: pointer;
     margin: 0 .8rem 0 0;
 }
-
 .chat_start input[type="checkbox"]:checked {
     background: url(../img/chek_on_01.png) 0 0 no-repeat;
 }
+
 /* chat_start - 입력 박스*/
-.chat_start .b_box {
+.chat_main .b_box {
     position: absolute;
     margin-top: 5rem;
     width: calc(100% - 300px);
     bottom: 5rem;
 }
-.chat_start .b_box .sand_box {
+.chat_main .b_box .sand_box {
     position: relative;
     max-width: 78rem;
     margin: 0 auto;
@@ -292,7 +290,7 @@
     border: solid 1px #e0e6eb;
     background: #fff;
 }
-.chat_start .b_box .sand_box::before {
+.chat_main .b_box .sand_box::before {
     content: '';
     width: 74rem;
     height: 3.6rem;
@@ -307,26 +305,129 @@
     left: 0;
     z-index: -1;
 }
-.chat_start .b_box .sand_box input[type="text"] {
+.chat_main .b_box .sand_box input[type="text"] {
     width: calc(100% - 3.6rem);
     color: #212931;
     border: none;
 }
-.chat_start .b_box .sand_box input[type="text"]::placeholder {
+.chat_main .b_box .sand_box input[type="text"]::placeholder {
     color: #848f9a;
 }
-.chat_start .b_box .sand_box input[type="text"]:focus {
+.chat_main .b_box .sand_box input[type="text"]:focus {
     outline: none;
 }
-.chat_start .b_box .sand_box button {
+.chat_main .b_box .sand_box button {
     width: 3.6rem;
     height: 3.6rem;
     background: url(../img/sand_off.png) center no-repeat;
 }
-.chat_start .b_box .sand_box.act button {
+.chat_main .b_box .sand_box.act button {
     background: url(../img/sand_on.png) center no-repeat;
 }
 
+/* chat_on - 채팅 영역 */
+.chat_onchat .t_box {
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.chat_onchat .chat_list .chat_box {
+    padding: 1.9rem 2rem;
+    color: #212931;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #f9fafb;
+}
+.chat_onchat .user_chat {
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+    gap: 1rem;
+}
+.chat_onchat .user_chat .chat_box {
+    border: solid 1px #b8dcff;
+    background-color: #f5faff; 
+}
+.chat_onchat .user_chat .chat_time {
+    font-size: 1.4rem;
+    color: #b6c2ce;
+}
+.chat_onchat .ai_chat {
+    align-items: center;
+    gap: 1rem;
+}
+.chat_onchat .ai_chat img {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* chat_on - 채팅 영역 ai 대화창 스피너 로딩 */
+.chat_onchat .ai_chat .loading_box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* 스피너 컨테이너 */
+.spinner {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+/* 스피너 내부 선 */
+.spinner .line {
+    position: absolute;
+    width: 1.5px;
+    height: 4px;
+    background-color: #3498db;
+    top: 2px;
+    left: 50%;
+    transform-origin: 50% 8px;
+    transform: translateX(-50%) rotate(0deg);
+    animation: spin 1.2s linear infinite;
+}
+/* 각 선의 회전 각도 */
+.spinner .line:nth-child(1) {
+    transform: translateX(-50%) rotate(0deg);
+    animation-delay: 0s;
+}
+.spinner .line:nth-child(2) {
+    transform: translateX(-50%) rotate(45deg);
+    animation-delay: -1.05s;
+}
+.spinner .line:nth-child(3) {
+    transform: translateX(-50%) rotate(90deg);
+    animation-delay: -0.9s;
+}
+.spinner .line:nth-child(4) {
+    transform: translateX(-50%) rotate(135deg);
+    animation-delay: -0.75s;
+}
+.spinner .line:nth-child(5) {
+    transform: translateX(-50%) rotate(180deg);
+    animation-delay: -0.6s;
+}
+.spinner .line:nth-child(6) {
+    transform: translateX(-50%) rotate(225deg);
+    animation-delay: -0.45s;
+}
+.spinner .line:nth-child(7) {
+    transform: translateX(-50%) rotate(270deg);
+    animation-delay: -0.3s;
+}
+.spinner .line:nth-child(8) {
+    transform: translateX(-50%) rotate(315deg);
+    animation-delay: -0.15s;
+}
+/* 스피너 애니메이션 */
+@keyframes spin {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 /*-------------------------------반응형-------------------------------*/
 @media screen and (max-width:1200px) {
@@ -334,7 +435,7 @@
     .ham_menu {
         width: 16px;
         height: 11px;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
