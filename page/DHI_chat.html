@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR_chat</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+    <header class="header flex_box">
+        <h1 class="blue flex_box">
+            <div class="ham_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="../img/logo.png" alt="logo">DHI
+        </h1>
+        <div class="flex_box">
+            <a href="javascript:void(0)" class="act">CHAT BOT</a>
+            <a href="javascript:void(0)">분석 결과 조회</a>
+        </div>
+    </header>
+    <main>
+        <!-- 챗봇 히스토리 영역 -->
+        <nav class="chat_history">
+            <!-- 현재 선택된 채팅 -->
+            <div class="cont_wr">
+                <div class="cont n1">
+                    <p class="period">Today</p>
+                    <div class="inner_cont">
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box blue font_bold">현재 선택된 채팅</a>
+                            <div class="r_box">
+                                <span class="date font_bold">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 어제 채팅 기록 -->
+                <div class="cont n2">
+                    <p class="period">Yesterday</p>
+                    <div class="inner_cont">
+                        <!-- chat_cont - 채팅 컨텐츠
+                            chat_cont.act - 수정 버튼 클릭시 활성화. 체크 클릭시 클래스 제거
+                            빈값으로 저장시 alert 노출
+                            해당 내용 스크립트 - chat.js
+                        -->
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 1 기록 1 기록 1 기록 1</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 1 기록 1 기록 1 기록 1</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 1 기록 1 기록 1 기록 1</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont n3">
+                    <p class="period">Previous 7 days</p>
+                    <div class="inner_cont">
+                        <!-- chat_cont - 채팅 컨텐츠
+                            chat_cont.act - 수정 버튼 클릭시 활성화. 체크 클릭시 클래스 제거
+                            해당 내용 스크립트 - chat.js
+                        -->
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 1 기록 1 기록 1 기록 1</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 1</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 2</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 3</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 4</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 5</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 6</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 7</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 8</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 9</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 10</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_cont flex_box">
+                            <a href="javascript:void(0)" class="tit l_box">기록 12개째 부터 스크롤</a>
+                            <div class="r_box">
+                                <span class="date">2024-09-28</span>
+                                <div class="btn_box dis-no">
+                                    <button type="button" class="edit_btn" title="수정"><img src="../img/edit_icon.png" alt="수정"></button>
+                                    <button type="button" class="del_btn" title="삭제"><img src="../img/del_icon.png" alt="삭제"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_cont">
+                <div class="t_box">
+                    <button type="button" class="flex_box"><img src="../img/new_chat_icon.png" alt="새로운 채팅">Start New Chat</button>
+                </div>
+                <div class="b_box">
+                    <p class="email font_bold">Sohee2.park@doosan.com</p>
+                    <span class="access_time">최근 접속시간 : 2025-01-03 11:30</span>
+                </div>
+            </div>
+            <div class="nav_custom-scrollbar">
+                <div class="scroll-thumb"></div>
+            </div>
+        </nav>
+        <!-- 챗봇 시작 디폴트 화면 -->
+        <section class="chat_main chat_start">
+            <div class="t_box flex_box">
+                <div class="t_cont flex_box">
+                    <div><img src="../img/logo_icon.png" alt="logo"></div>
+                    <h2 class="tit font_bold">새 채팅을 시작하고 있습니다.</h2>
+                    <p class="sub_txt">
+                        첫 번째 메시지를 입력하여 새로운 채팅을 시작하세요.<br>
+                        이 단계에서 아래의 옵션을 선택할 수 있습니다.
+                    </p>
+                </div>
+                <div class="b_cont flex_box multi_select_box">
+                    <div class="l_cont sel_box">
+                        <div class="header">
+                            <span class="font_bold">팀 :</span>
+                            <span class="counter font_bold"><span class="blue">11</span> / 11</span>
+                        </div>
+                        <ul class="checklist">
+                            <!--
+                                스타일 3가지 - class로 제어
+                                (체크가 안된 체크박스, 체크가 된 체크박스(checked), 전체 선택이 체크 되었을 때 나머지 체크박스(checked, type02))
+
+                                초기상태 : 전체체크된 체크박스
+                                전체 선택 li(all_chkbox)에 checked가 있으면 나머지엔 type02 추가, 없으면 type02 모두 제거
+                                개별 체크시 checked 클래스만 제어
+                            -->
+                            <li class="all_chkbox checked">
+                                <label>
+                                    <input type="checkbox" class="chk_all" checked /> 전체
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명02 팀명02 팀명02
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명03 팀명03 팀명03
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명05 팀명05 팀명05 팀명05
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명06
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="r_cont sel_box">
+                        <div class="header">
+                            <span class="font_bold">프로젝트 :</span>
+                            <span class="counter font_bold"><span class="blue">11</span> / 11</span>
+                        </div>
+                        <ul class="checklist">
+                            <li class="all_chkbox checked">
+                                <label>
+                                    <input type="checkbox" class="chk_all" checked/> 전체
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명01 프로젝트명01
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명03 프로젝트명03
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명06
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명07 프로젝트명07
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명08 프로젝트명08
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명09 프로젝트명09 프로젝트명09
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
+                                </label>
+                            </li>
+                            <li class = "checked type02">
+                                <label>
+                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="b_box">
+                <div class="sand_box flex_box">
+                    <input type="text" name="chat_sand" placeholder="메시지를 입력하세요.">
+                    <button type="button"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 챗봇 챗팅 화면 -->
+    <!-- <section class="chat_main"></section> -->
+</body>
+<script src="../js/chat.js"></script>
+<script>
+    
+    // input 요소 선택
+    const chatInput = document.querySelector('input[name="chat_sand"]');
+    const sandBox = document.querySelector('.sand_box');
+
+    // input에 포커스가 되면 sand_box에 클래스 추가
+    chatInput.addEventListener('focus', () => {
+        sandBox.classList.add('act');
+    });
+
+    // input에서 포커스가 해제되면 sand_box에서 클래스 제거
+    chatInput.addEventListener('blur', () => {
+        sandBox.classList.remove('act');
+    });
+
+
+    // 햄버거 메뉴 요소 선택
+    const hamburgerMenu = document.querySelector('.ham_menu');
+
+    // 클릭 시 햄버거 메뉴와 body에 클래스 추가/제거 (토글)
+    hamburgerMenu.addEventListener('click', () => {
+        // 햄버거 메뉴에 active 클래스 토글
+        hamburgerMenu.classList.toggle('active');
+        
+        // body에 ham_on, ham_off 클래스 토글
+        document.body.classList.toggle('ham_act');
+    });
+
+</script>
+</html>

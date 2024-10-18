@@ -1,0 +1,385 @@
+/* chat_history 채팅 히스토리 영역 */
+.chat_history {
+    display: inline-block;
+    width: 300px;
+    height: calc(100vh - 6.5rem);
+    border-right: 1px solid #e0e6eb;
+    position: relative;
+    background: #fff;
+    z-index: 1;
+}
+.chat_history .cont_wr {
+    padding: 3rem 0 8rem;
+    max-height: calc(100vh - 19.2rem);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.chat_history .cont_wr::-webkit-scrollbar {
+    display: none;
+}
+.nav_custom-scrollbar {
+    position: absolute;
+    top: 10px;
+    right: -10px; /* 콘텐츠 영역 밖으로 스크롤바 위치 */
+    width: 4px;
+    height: 78rem;
+    background: transparent;
+}
+.nav_custom-scrollbar .scroll-thumb {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #f9fafb;
+    cursor: pointer;
+    position: relative;
+}
+.chat_history .cont {
+    padding: 0 2rem 1.5rem;
+}
+.chat_history .cont:not(:first-child) {
+    padding-top: 1.5rem;
+}
+.chat_history .cont .period {
+    font-size: 1.4rem;
+    letter-spacing: -.028rem;
+    color: #848f9a;
+    margin-bottom: 1rem;
+}
+/* chat_history - Today */
+.chat_history .cont.n1 .chat_cont {
+    border-radius: .4rem;
+    border: solid 1px #b8dcff;
+    background-color: #ebf5ff;
+}
+.chat_history .cont.n1 .chat_cont .title_input {
+    font-weight: 500;
+    color: #005eb8;
+    background-color: #ebf5ff;
+}
+.chat_history .cont.n1 .chat_cont .title_input:focus {
+    outline: 2px solid #b8dcff;
+}
+.chat_history .cont.n1 .chat_cont .r_box .date {
+    color: #005eb8;
+}
+/* chat_history - Today 그 외 */
+.chat_history .chat_cont {
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 4rem;
+    padding: 1.2rem 1rem;
+}
+.chat_history .cont:not(.n1) .chat_cont .tit {
+    white-space: nowrap;
+    max-width: 15rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #212931;
+    letter-spacing: -.032rem;
+}
+.chat_history .chat_cont .r_box .date {
+    font-size: 1.2rem;
+    color: #b6c2ce;
+}
+.chat_history .chat_cont:hover .r_box .date {
+    display: none;
+}
+.chat_history .chat_cont:hover .r_box .btn_box {
+    display: block;
+}
+.chat_history .chat_cont:hover,
+.chat_history .chat_cont.act {
+    border-radius: .4rem;
+    background-color: #f3f5f7;
+}
+.chat_history .chat_cont.act .tit,
+.chat_history .chat_cont.act .r_box .date {
+    display: none;
+}
+.chat_history .chat_cont.act .title_input {
+    max-width: 16.4rem;
+    border: none;
+    color: #212931;
+    background-color: #f3f5f7;
+}
+.chat_history .chat_cont.act .r_box .btn_box {
+    display: flex;
+}
+.chat_history .chat_cont .r_box .btn_box button + button {
+    margin-left: .4rem;
+}
+.chat_history .chat_cont .r_box .btn_box .save_btn {
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    background: url(../img/save_icon.png) center no-repeat;
+}
+.chat_history .b_cont {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.chat_history .b_cont .t_box {
+    height: 16rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 50%);
+    border-bottom: 1px solid #e0e6eb;
+}
+.chat_history .b_cont .t_box .flex_box {
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    padding: 1.7rem 0;
+    margin: 0 auto;
+    border-radius: .8rem;
+    box-shadow: 0 4px 12px 0 rgba(0, 42, 82, 0.15), 0 2px 4px 0 rgba(0, 42, 82, 0.1);
+    border: solid 1px #fff;
+    background-image: linear-gradient(78deg, #005eb8 0%, #1f91ff 100%);
+}
+.chat_history .b_cont .b_box {
+    font-size: 0;
+    padding: 2rem;
+}
+.chat_history .b_cont .b_box .email {
+    font-size: 1.6rem;
+    color: #212931;
+    margin-bottom: .8rem;
+}
+.chat_history .b_cont .b_box .access_time {
+    font-size: 1.2rem;
+    color: #848f9a;
+}
+
+/* chat_start 채팅 시작 영역*/
+.chat_main {
+    display: inline-block;
+    width: calc(100% - 303px);
+    height: calc(100vh - 218px);
+    vertical-align: top;
+}
+.chat_start .t_box {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6rem;
+    height: 100%;
+}
+.chat_start .t_box .t_cont {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+.chat_start .t_box .t_cont .tit {
+    font-size: 2.4rem;
+    color: #212931;
+    line-height: 1.17;
+    margin-top: 1rem;
+}
+
+.chat_start .t_box .t_cont .sub_txt {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #354350;
+}
+/* chat_start - 셀렉트 박스 영역*/
+.chat_start .t_box .b_cont {
+    justify-content: center;
+    gap: 1rem;
+}
+.chat_start .sel_box {
+    border: 1px solid #e0e6eb;
+    border-radius: .8rem;
+}
+.chat_start .multi_select_box .sel_box {
+    padding: 2rem 0 2rem 2rem;
+    width: 43.5rem;
+    max-height: 34rem;
+}
+.chat_start .sel_box .header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.chat_start .checklist {
+    padding-right: .5rem;
+    height: calc(100% - 1.7rem);
+    overflow: auto;
+}
+.chat_start .checklist::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+.chat_start .checklist::-webkit-scrollbar-thumb {
+    border: .4rem solid white;
+    background-color: #e0e6eb;
+    border-radius: 10px;
+}
+.chat_start .checklist li {
+    margin-bottom: .6rem;
+    max-width: 39rem;
+    width: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #e0e6eb;
+    border-radius: 2.4rem;
+    padding: .4rem 1.6rem;
+}
+.chat_start .checklist li.checked {
+    border: solid 1px #b8dcff;
+    background-color: #ebf5ff;
+}
+.chat_start .checklist li.checked:not(.type02) label {
+    color: #005eb8;
+    font-weight:500;
+}
+.chat_start .checklist li.checked.type02 {
+    border: solid 1px #e0e6eb;
+    background-color: #f3f5f7;
+}
+.chat_start .checklist li.checked.type02 label {
+    color: #848f9a;
+}
+.chat_start .checklist li.checked.type02 input[type="checkbox"]:checked {
+    background: url(../img/chek_on_02.png) 0 0 no-repeat;
+}
+
+.chat_start label {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    line-height: 1.75;
+}
+
+.chat_start input[type="checkbox"] {
+    appearance: none;
+    background: url(../img/chek_off.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    cursor: pointer;
+    margin: 0 .8rem 0 0;
+}
+
+.chat_start input[type="checkbox"]:checked {
+    background: url(../img/chek_on_01.png) 0 0 no-repeat;
+}
+/* chat_start - 입력 박스*/
+.chat_start .b_box {
+    position: absolute;
+    margin-top: 5rem;
+    width: calc(100% - 300px);
+    bottom: 5rem;
+}
+.chat_start .b_box .sand_box {
+    position: relative;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: solid 1px #e0e6eb;
+    background: #fff;
+}
+.chat_start .b_box .sand_box::before {
+    content: '';
+    width: 74rem;
+    height: 3.6rem;
+    margin: 8px 17.7px 0 17.7px;
+    padding: 2px 2.3px 18px 2.3px;
+    opacity: 0.2;
+    border-radius: 2rem;
+    filter: blur(20px);
+    background-color: #848f9a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.chat_start .b_box .sand_box input[type="text"] {
+    width: calc(100% - 3.6rem);
+    color: #212931;
+    border: none;
+}
+.chat_start .b_box .sand_box input[type="text"]::placeholder {
+    color: #848f9a;
+}
+.chat_start .b_box .sand_box input[type="text"]:focus {
+    outline: none;
+}
+.chat_start .b_box .sand_box button {
+    width: 3.6rem;
+    height: 3.6rem;
+    background: url(../img/sand_off.png) center no-repeat;
+}
+.chat_start .b_box .sand_box.act button {
+    background: url(../img/sand_on.png) center no-repeat;
+}
+
+
+/*-------------------------------반응형-------------------------------*/
+@media screen and (max-width:1200px) {
+    /* 햄버거 메뉴 스타일 */
+    .ham_menu {
+        width: 16px;
+        height: 11px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 0;
+        gap: 0;
+        margin-right: 20px;
+    }
+
+    .ham_menu span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .ham_menu.active span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .ham_menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .ham_menu.active span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+    .chat_history {
+        position: absolute;
+        left: -100%;
+        transition: left .3s linear;
+    }
+    .ham_act .chat_history {
+        left: 0;
+    }
+    .chat_main,
+    .chat_start .b_box {
+        width: 100%;
+    }
+    .chat_start .t_box .b_cont {
+        flex-direction: column;
+        width: 50%;
+    }
+    .chat_start .multi_select_box .sel_box {
+        width: 100%;
+        max-height: 20rem;
+    }
+}

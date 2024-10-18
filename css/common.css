@@ -1,0 +1,79 @@
+* {
+    font-family: 'Pretendard';
+    letter-spacing: normal;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #000;
+}
+.pc {
+    display: block;
+}
+.dis-no {
+    display: none;
+}
+.ir {
+    font-size: 0;
+}
+.sr_only {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.scrollLock {overflow: hidden}
+.flex_box {
+    display: flex;
+}
+.blue {
+    color: #005eb8;
+}
+.font_bold {
+    font-weight: 500;
+}
+/* header */
+header {
+    border-bottom: 1px solid #e0e6eb;
+}
+header h1 {
+    padding: 2.2rem 2rem;
+    width: 300px;
+    border-right: 1px solid #e0e6eb;
+    font-size: 2.1rem;
+    font-weight: bold;
+    align-items: center;
+    gap: 1rem;
+}
+header div {
+    padding: 0 3rem;
+    gap: 3rem;
+}
+header div a {
+    font-size: 1.8rem;
+    line-height: 6rem;
+    letter-spacing: -.036rem;
+    color: #848f9a;
+    position: relative;
+}
+header div a.act,
+header div a:hover {
+    color: #005eb8;
+    font-weight: bold;
+    border-bottom: 3px solid #005eb8;
+    transition: all 0.1s linear;
+}
+main {
+    font-size: 0;
+}
+@media screen and (max-width:1200px) {
+    header h1 {
+        width: auto;
+        border-right: none;
+        padding-right: .4rem;
+        padding-left: 3rem;
+    }
+}
+@media screen and (max-width:768px) {
+
+}
