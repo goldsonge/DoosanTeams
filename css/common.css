@@ -78,5 +78,11 @@ main {
     }
 }
 @media screen and (max-width:768px) {
-
+    header h1 {
+        padding-left: 1.5rem;
+        font-size: 1.6rem;
+    }
+    header div a {
+        font-size: 1.5rem;
+    }
 }

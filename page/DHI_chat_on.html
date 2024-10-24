@@ -229,7 +229,19 @@
         </nav>
         <!-- 챗봇 채팅 화면 -->
         <section class="chat_main chat_onchat">
-            <div class="t_box flex_box">
+            <div class="chat_hd flex_box">
+                <div class="cont">
+                    <span>팀:</span>
+
+                </div>
+                <div class="cont">
+                    <span>프로젝트:</span>
+                </div>
+            </div>
+            <div class="t_box flex_box scroll">
+                <!--
+                    
+                -->
                 <div class="user_chat chat_list flex_box">
                     <p class="chat_time">2024-09-05 09:00</p>
                     <div class="chat_box">
@@ -252,6 +264,38 @@
                         <p class="chat_text">Generating Answers</p>
                     </div>
                 </div>
+                <div class="user_chat chat_list flex_box">
+                    <p class="chat_time">2024-09-05 09:00</p>
+                    <div class="chat_box">
+                        <p class="chat_text">(사용자 입력 Prompt 예시) 직원 교육 프로그램에는 어떤 것이 있나요?</p>
+                    </div>
+                </div>
+                <div class="ai_chat chat_list flex_box type02">
+                    <img src="../img/logo_icon.png" alt="채팅 ai 로고">
+                    <div class="r_cont">
+                        <p class="chat_time">2024-09-05 09:00</p>
+                        <div class="chat_box">
+                            <p class="chat_text">
+                                (LLM 답변 예시) 다음은 주요 직원 교육 프로그램의 세부 내용입니다:
+                            </p>
+                            <p class="chat_text chat_tit">
+                                1. 직무 관련 기술 교육
+                            </p>
+                            <p class="chat_text chat_cont">
+                                직원의 특정 직무에 필요한 기술과 지식을 강화하기 위한 프로그램입니다. 예를 들어, IT 부서의 경우 최신 프로그래밍 언어 교육, 마케팅 부서의 경우 디지털 마케팅 기법 교육 등이 포함됩니다. 이 교육은 내부 강사 또는 외부 전문가를 통해 진행되며, 실습 중심으로 구성되어 실무 능력을 높이는 데 중점을 둡니다.
+                            </p>
+                            <p class="chat_text chat_tit">
+                                2. 리더십 개발 프로그램
+                            </p>
+                            <p class="chat_text chat_cont">
+                                차세대 리더를 양성하기 위한 프로그램으로, 리더십 스킬, 의사소통 능력, 팀 관리 기법 등을 배웁니다. 이 과정은 워크숍, 멘토링, 사례 연구를 포함하여 이론과 실습을 병행하여 진행됩니다. 참여자는 자신만의 리더십 스타일을 개발하고, 조직 내에서의 리더십 역할에 대한 이해도를 높일 수 있습니다. 
+                            </p>
+                            <p class="chat_text">
+                                주요 직원 교육 프로그램에 대해 안내드렸습니다. 추가로 필요한 부분이 있으면 언제든 말씀해 주세요!
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="b_box">
                 <div class="sand_box flex_box">
@@ -260,6 +304,7 @@
                 </div>
             </div>
         </section>
+        <section class="chat_pdf"></section>
     </main>
 
     <!-- 챗봇 챗팅 화면 -->
