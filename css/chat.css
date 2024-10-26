@@ -255,14 +255,15 @@
     appearance: none;
     background: url(../img/chek_off.png) 0 0 no-repeat;
     background-size: contain;
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     position: relative;
     cursor: pointer;
-    margin: 0 .8rem 0 0;
+    margin: 0 .6rem 0 0;
 }
 .chat_start input[type="checkbox"]:checked {
     background: url(../img/chek_on_01.png) 0 0 no-repeat;
+    height: 1rem;
 }
 
 /* chat_start - 입력 박스*/
@@ -572,7 +573,42 @@ body.act_pdf main {
     font-weight: bold;
     color: #354350;
 }
-
+/* HR_chat */
+.hr_chat .header {
+    border-bottom: none;
+}
+.hr_chat .header h1 {
+    padding: 1.9rem 2rem;
+    border-bottom: 1px solid #e0e6eb;
+}
+.hr_chat .chat_onchat .chat_hd {
+    height: 60px;
+}
+.hr_chat .chat_main{
+    position: absolute;
+    top: 0;
+    height: calc(100vh - 170px);
+}
+.hr_chat .chat_start .multi_select_box .sel_box {
+    width: 66rem;
+    padding: 3.7rem 2.7rem 5rem;
+}
+.hr_chat .chat_start .sel_box .header {
+    justify-content: center;
+}
+.hr_chat .chat_start .checklist {
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.hr_chat .chat_start .checklist li {
+    margin: 0;
+}
+.hr_chat + .chat_pdf .tit_box {
+    height: 60px;
+}
 /*-------------------------------반응형-------------------------------*/
 @media screen and (max-width:1499px) {
     /* 햄버거 메뉴 스타일 */
@@ -627,7 +663,6 @@ body.act_pdf main {
         width: 100%;
         max-height: 20rem;
     }
-
     /* 챗봇 반응형 */
     .chat_onchat .chat_hd {
         padding: 1.4rem 1.5rem;
@@ -657,10 +692,36 @@ body.act_pdf main {
         width: 300px;
         right: -300px;
     }
+
+    /* HR 챗봇 반응형 */
+    .hr_chat .header {
+        height: 54px;
+        border-bottom: 1px solid #e0e6eb;
+    }
+    .hr_chat .chat_start .t_box .b_cont {
+        width: 50%;
+    }
+    .hr_chat .chat_start .multi_select_box .sel_box {
+        width: 100%;
+        max-height: unset;
+    }
+    .hr_chat .chat_main {
+        position: unset;
+        height: calc(100vh - 200px);
+    }
+    .hr_chat + .chat_pdf .tit_box {
+        height: 54px;
+        padding-top: 1.6rem;
+    }
 }
 @media screen and (max-width:899px) {
     body.act_pdf main {
         width: 100%;
+    }
+
+    /* HR 챗봇 반응형 */
+    .hr_chat .chat_start .t_box .b_cont {
+        width: 80%;
     }
     
 }
@@ -674,5 +735,12 @@ body.act_pdf main {
     }
     .chat_main .b_box .send_box::before {
         width: -webkit-fill-available;
+    }
+    .chat_pdf .tit_box {
+        padding-top: 2.1rem;
+    }
+    /* HR 챗봇 반응형 */
+    .hr_chat .chat_main {
+        height: calc(100vh - 250px);
     }
 }

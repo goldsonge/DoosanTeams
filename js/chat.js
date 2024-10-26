@@ -126,7 +126,6 @@ const checklistContainers = document.querySelectorAll('.sel_box');
 checklistContainers.forEach(container => {
     const checkAllBox = container.querySelector('.chk_all');
     const checkboxes = container.querySelectorAll('.chk_cont');
-    const counter = container.querySelector('.counter');
 
     // 전체 선택 기능
     checkAllBox.addEventListener('change', (e) => {
@@ -152,8 +151,6 @@ checklistContainers.forEach(container => {
         } else {
             allLi.classList.remove('checked'); // 전체 선택 해제 시 클래스 제거
         }
-
-        updateCounter(); // 카운터 업데이트
     });
 
     // 각각의 항목 체크 시 전체 선택 박스 및 클래스 업데이트
@@ -195,19 +192,8 @@ checklistContainers.forEach(container => {
                     }
                 }
             });
-
-            updateCounter(); // 카운터 업데이트
         });
     });
-
-    // 카운터 업데이트
-    const updateCounter = () => {
-        const checkedCount = [...checkboxes].filter(box => box.checked).length;
-        counter.innerHTML = `<span class="blue font_bold">${checkedCount}</span> / ${checkboxes.length}`;
-    };
-
-    // 초기 카운터 상태 설정
-    updateCounter();
 });
 //----------------------------------------------------------------------------------------
 // 채팅 영역 하단 채팅 입력 인풋 스타일 스크립트
@@ -232,21 +218,24 @@ hamburgerMenu.addEventListener('click', () => {
 });
 //----------------------------------------------------------------------------------------
 // pdf 영역 관련 스크립트
-document.querySelectorAll('.link_box .pdf_btn').forEach(function(btn) {
-    btn.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        document.querySelector('section.chat_pdf').classList.add('active');
-        document.querySelector('body').classList.add('act_pdf');
+const pdf_section = document.querySelector('section.chat_pdf');
+if(pdf_section){
+    document.querySelectorAll('.link_box .pdf_btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            pdf_section.classList.add('active');
+            document.querySelector('body').classList.add('act_pdf');
+        });
     });
-});
-
-document.querySelector('.close_btn').addEventListener('click', function(event) {
-    event.preventDefault();
-
-    document.querySelector('section.chat_pdf').classList.remove('active');
-    document.querySelector('body').classList.remove('act_pdf');
-});
+    
+    document.querySelector('.close_btn').addEventListener('click', function(event) {
+        event.preventDefault();
+    
+        document.querySelector('section.chat_pdf').classList.remove('active');
+        document.querySelector('body').classList.remove('act_pdf');
+    });
+}
 //----------------------------------------------------------------------------------------
 // 채팅 의견 말풍선 아이콘 인터렉션
 document.querySelectorAll('.coment_btn .icon_chat').forEach(function(iconChat) {

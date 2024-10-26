@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DHI_chat</title>
+    <title>HR_chat</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/chat.css">
 </head>
 <body>
-    <main>
+    <main class="hr_chat">
         <header class="header flex_box">
             <h1 class="blue flex_box">
                 <div class="ham_menu">
@@ -17,12 +17,8 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img src="/img/logo.png" alt="logo">DHI
+                <img src="/img/logo.png" alt="logo">HR CHAT BOT
             </h1>
-            <div class="flex_box">
-                <a href="javascript:void(0)" class="act">CHAT BOT</a>
-                <a href="javascript:void(0)">분석 결과 조회</a>
-            </div>
         </header>
         <!-- 챗봇 히스토리 영역 -->
         <nav class="chat_history">
@@ -227,151 +223,164 @@
                 <div class="scroll-thumb"></div>
             </div>
         </nav>
-        <!-- 챗봇 시작 디폴트 화면 -->
-        <section class="chat_main chat_start">
-            <div class="t_box flex_box">
-                <div class="t_cont flex_box">
-                    <div><img src="/img/icon_logo.png" alt="logo"></div>
-                    <h2 class="tit font_bold">새 채팅을 시작하고 있습니다.</h2>
-                    <p class="sub_txt">
-                        첫 번째 메시지를 입력하여 새로운 채팅을 시작하세요.<br>
-                        이 단계에서 아래의 옵션을 선택할 수 있습니다.
-                    </p>
-                </div>
-                <div class="b_cont flex_box multi_select_box">
-                    <div class="l_cont sel_box">
-                        <div class="header">
-                            <span class="font_bold">팀 :</span>
-                            <span class="counter font_bold"><span class="blue">11</span> / 11</span>
+        <!-- 챗봇 채팅 화면 -->
+        <section class="chat_main chat_onchat">
+            <div class="chat_hd flex_box">
+                <div class="cont_wr flex_box">
+                    <span class="cont_tit">회사규정:</span>
+                    <span title="에너빌리티" class="cont">에너빌리티</span>
+                    <div class="count_wr">
+                        <div class="count_box">
+                            <!-- cont_list 내 컨텐츠 갯수 -->
+                            +<span class="count_num">2</span>
+                            <img src="./img/icon_arr.png" alt="화살표 아이콘">
                         </div>
-                        <ul class="checklist scroll">
-                            <!--
-                                스타일 3가지 - class로 제어
-                                (체크가 안된 체크박스, 체크가 된 체크박스(checked), 전체 선택이 체크 되었을 때 나머지 체크박스(checked, type02))
-
-                                초기상태 : 전체체크된 체크박스
-                                전체 선택 li(all_chkbox)에 checked가 있으면 나머지엔 type02 추가, 없으면 type02 모두 제거
-                                개별 체크시 checked 클래스만 제어
-                            -->
-                            <li class="all_chkbox checked">
-                                <label>
-                                    <input type="checkbox" class="chk_all" checked /> 전체
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명02 팀명02 팀명02
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명03 팀명03 팀명03
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명05 팀명05 팀명05 팀명05
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명06
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
-                                </label>
-                            </li>
-                        </ul>
+                        <div class="cont_list">
+                            <p title="에너빌리티2" class="cont">에너빌리티2</p>
+                            <p title="에너빌리티3 에너빌리티3 에너빌리티3" class="cont">에너빌리티3 에너빌리티3 에너빌리티3</p>
+                        </div>
                     </div>
-                    <div class="r_cont sel_box">
-                        <div class="header">
-                            <span class="font_bold">프로젝트 :</span>
-                            <span class="counter font_bold"><span class="blue">11</span> / 11</span>
+                </div>
+            </div>
+            <!-- scroll 클래스 붙이면 스크롤 스타일 반영 -->
+            <div class="t_box flex_box scroll">
+                <!-- chat_list defalut는 사용자 말풍선 ai_chat, type02가 붙으면 ai  -->
+                <div class="user_chat chat_list flex_box">
+                    <p class="chat_time">2024-09-05 09:00</p>
+                    <div class="chat_box">
+                        <p class="chat_text">(사용자 입력 Prompt 예시) 직원 교육 프로그램에는 어떤 것이 있나요?</p>
+                    </div>
+                </div>
+                <div class="ai_chat chat_list flex_box type02">
+                    <img src="/img/icon_logo.png" alt="채팅 ai 로고" class="pc">
+                    <div class="mo blue chat_name">
+                        CHAT BOT
+                        <p class="chat_time">2024-09-05 09:00</p>
+                    </div>
+                    <!-- loading_box 블럭만 가져가면 로딩 스타일 사용 가능  -->
+                    <div class="chat_box loading_box">
+                        <div class="spinner">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
                         </div>
-                        <ul class="checklist scroll">
-                            <li class="all_chkbox checked">
-                                <label>
-                                    <input type="checkbox" class="chk_all" checked/> 전체
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명01 프로젝트명01
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명03 프로젝트명03
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명06
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명07 프로젝트명07
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명08 프로젝트명08
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명09 프로젝트명09 프로젝트명09
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
-                                </label>
-                            </li>
-                        </ul>
+                        <p class="chat_text">Generating Answers</p>
+                    </div>
+                </div>
+                <div class="user_chat chat_list flex_box">
+                    <p class="chat_time">2024-09-05 09:00</p>
+                    <div class="chat_box">
+                        <p class="chat_text">(사용자 입력 Prompt 예시) 직원 교육 프로그램에는 어떤 것이 있나요?</p>
+                    </div>
+                </div>
+                <!-- pc -> 1500 이상, mo -> 1500 미만 -->
+                 <!-- .chat_onchat .chat_list .chat_box .num_box 숫자 임력시 번호 딱지 생성 가능 -->
+                <div class="ai_chat chat_list flex_box type02">
+                    <img src="/img/icon_logo.png" alt="채팅 ai 로고" class="pc">
+                    <div class="mo blue chat_name">
+                        CHAT BOT
+                        <p class="chat_time">2024-09-05 09:00</p>
+                    </div>
+                    <div class="r_cont">
+                        <p class="chat_time pc">2024-09-05 09:00</p>
+                        <div class="chat_box">
+                            <p class="chat_text">
+                                (LLM 답변 예시) 다음은 주요 직원 교육 프로그램의 세부 내용입니다:
+                            </p>
+                            <p class="chat_text chat_tit">
+                                1. 직무 관련 기술 교육
+                            </p>
+                            <p class="chat_text chat_cont">
+                                직원의 특정 직무에 필요한 기술과 지식을 강화하기 위한 프로그램입니다. 예를 들어, IT 부서의 경우 최신 프로그래밍 언어 교육, 마케팅 부서의 경우 디지털 마케팅 기법 교육 등이 포함됩니다. 이 교육은 내부 강사 또는 외부 전문가를 통해 진행되며, 실습 중심으로 구성되어 실무 능력을 높이는 데 중점을 둡니다.
+                                <span class="num_box">1</span>
+                            </p>
+                            <p class="chat_text chat_tit">
+                                2. 리더십 개발 프로그램
+                            </p>
+                            <p class="chat_text chat_cont">
+                                차세대 리더를 양성하기 위한 프로그램으로, 리더십 스킬, 의사소통 능력, 팀 관리 기법 등을 배웁니다. 이 과정은 워크숍, 멘토링, 사례 연구를 포함하여 이론과 실습을 병행하여 진행됩니다. 참여자는 자신만의 리더십 스타일을 개발하고, 조직 내에서의 리더십 역할에 대한 이해도를 높일 수 있습니다. 
+                                <span class="num_box">2</span>
+                                <span class="num_box">3</span>
+                            </p>
+                            <p class="chat_text">
+                                주요 직원 교육 프로그램에 대해 안내드렸습니다. 추가로 필요한 부분이 있으면 언제든 말씀해 주세요!
+                            </p>
+                            <div class="link_box flex_box">
+                                <a href="http://ref-link.com" target="_blank" class="link_btn flex_box blue"><span class="num_box">1</span>http://ref-link.com</a>
+                                <a href="http://ref-link.com" target="_blank" class="link_btn flex_box blue"><span class="num_box">2</span>http://ref-link2.com</a>
+                                <a href="#" class="link_btn pdf_btn flex_box blue"><span class="num_box">3</span>reference.pdf</a>
+                            </div>
+                            <div class="btn_box flex_box">
+                                <!-- coment_btn에 act 붙으면 전송 인풋 활성화, 없으면 비활성화 -->
+                                <button type="button" class="flex_box coment_btn">
+                                    <input type="text" placeholder="의견을 작성해주세요.">
+                                    <img src="./img/icon_send.png" alt="전송 아이콘" class="icon_send">
+                                    <img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat">
+                                </button>
+                                <button type="button" class="flex_box"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button>
+                                <button type="button" class="flex_box"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button>
+                                <button type="button" class="flex_box copy_btn blue"><img src="./img/icon_copy.png" alt="복사 아이콘">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_chat chat_list flex_box">
+                    <p class="chat_time">2024-09-05 09:00</p>
+                    <div class="chat_box">
+                        <p class="chat_text">(사용자 입력 Prompt 예시) 직원 교육 프로그램에는 어떤 것이 있나요?</p>
+                    </div>
+                </div>
+                <div class="ai_chat chat_list flex_box type02">
+                    <img src="/img/icon_logo.png" alt="채팅 ai 로고" class="pc">
+                    <div class="mo blue chat_name">
+                        CHAT BOT
+                        <p class="chat_time">2024-09-05 09:00</p>
+                    </div>
+                    <div class="r_cont">
+                        <p class="chat_time pc">2024-09-05 09:00</p>
+                        <div class="chat_box">
+                            <p class="chat_text">
+                                (LLM 답변 예시) 다음은 주요 직원 교육 프로그램의 세부 내용입니다:
+                            </p>
+                            <p class="chat_text chat_tit">
+                                1. 직무 관련 기술 교육
+                            </p>
+                            <p class="chat_text chat_cont">
+                                직원의 특정 직무에 필요한 기술과 지식을 강화하기 위한 프로그램입니다. 예를 들어, IT 부서의 경우 최신 프로그래밍 언어 교육, 마케팅 부서의 경우 디지털 마케팅 기법 교육 등이 포함됩니다. 이 교육은 내부 강사 또는 외부 전문가를 통해 진행되며, 실습 중심으로 구성되어 실무 능력을 높이는 데 중점을 둡니다.
+                                <span class="num_box">1</span>
+                            </p>
+                            <p class="chat_text chat_tit">
+                                2. 리더십 개발 프로그램
+                            </p>
+                            <p class="chat_text chat_cont">
+                                차세대 리더를 양성하기 위한 프로그램으로, 리더십 스킬, 의사소통 능력, 팀 관리 기법 등을 배웁니다. 이 과정은 워크숍, 멘토링, 사례 연구를 포함하여 이론과 실습을 병행하여 진행됩니다. 참여자는 자신만의 리더십 스타일을 개발하고, 조직 내에서의 리더십 역할에 대한 이해도를 높일 수 있습니다. 
+                                <span class="num_box">2</span>
+                                <span class="num_box">3</span>
+                            </p>
+                            <p class="chat_text">
+                                주요 직원 교육 프로그램에 대해 안내드렸습니다. 추가로 필요한 부분이 있으면 언제든 말씀해 주세요!
+                            </p>
+                            <div class="link_box flex_box">
+                                <a href="http://ref-link.com" target="_blank" class="link_btn flex_box blue"><span class="num_box">1</span>http://ref-link.com</a>
+                                <a href="http://ref-link.com" target="_blank" class="link_btn flex_box blue"><span class="num_box">2</span>http://ref-link2.com</a>
+                                <a href="#" class="link_btn pdf_btn flex_box blue"><span class="num_box">3</span>reference.pdf</a>
+                            </div>
+                            <div class="btn_box flex_box">
+                                <button type="button" class="flex_box coment_btn">
+                                    <input type="text" placeholder="의견을 작성해주세요.">
+                                    <img src="./img/icon_send.png" alt="전송 아이콘" class="icon_send">
+                                    <img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat">
+                                </button>
+                                <button type="button" class="flex_box"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button>
+                                <button type="button" class="flex_box"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button>
+                                <button type="button" class="flex_box copy_btn blue"><img src="./img/icon_copy.png" alt="복사 아이콘">Copy</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -383,9 +392,18 @@
             </div>
         </section>
     </main>
-
-    <!-- 챗봇 챗팅 화면 -->
-    <!-- <section class="chat_main"></section> -->
+    <!-- 챗봇 pdf 영역 -->
+     <!-- .link_box내에  .pdf_btn 클릭시 body에 act_pdf클래스 추가 후 활성화.  
+        닫아 줄 때에는 해당 섹션에 있는 close 버튼 클릭시 닫기 가능. 
+     -->
+    <section class="chat_pdf">
+        <div class="tit_box flex_box">
+            <span></span>
+            <h2>reference.pdf</h2>
+            <button type="button" class="close_btn"><img src="./img/icon_close.png" alt="닫기 아이콘"></button>
+        </div>
+        <div class="cont_box"></div>
+    </section>
 </body>
 <script src="/js/chat.js"></script>
 </html>

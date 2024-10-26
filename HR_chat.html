@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DHI_chat</title>
+    <title>HR_chat</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/chat.css">
 </head>
 <body>
-    <main>
+    <main class="hr_chat">
         <header class="header flex_box">
             <h1 class="blue flex_box">
                 <div class="ham_menu">
@@ -17,12 +17,8 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img src="/img/logo.png" alt="logo">DHI
+                <img src="/img/logo.png" alt="logo">HR CHAT BOT
             </h1>
-            <div class="flex_box">
-                <a href="javascript:void(0)" class="act">CHAT BOT</a>
-                <a href="javascript:void(0)">분석 결과 조회</a>
-            </div>
         </header>
         <!-- 챗봇 히스토리 영역 -->
         <nav class="chat_history">
@@ -241,10 +237,9 @@
                 <div class="b_cont flex_box multi_select_box">
                     <div class="l_cont sel_box">
                         <div class="header">
-                            <span class="font_bold">팀 :</span>
-                            <span class="counter font_bold"><span class="blue">11</span> / 11</span>
+                            <span class="font_bold">회사규정 :</span>
                         </div>
-                        <ul class="checklist scroll">
+                        <ul class="checklist scroll flex_box">
                             <!--
                                 스타일 3가지 - class로 제어
                                 (체크가 안된 체크박스, 체크가 된 체크박스(checked), 전체 선택이 체크 되었을 때 나머지 체크박스(checked, type02))
@@ -260,115 +255,42 @@
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명02 팀명02 팀명02
+                                    <input type="checkbox" class="chk_cont" checked/> VCC
                                 </label>
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명03 팀명03 팀명03
+                                    <input type="checkbox" class="chk_cont" checked/> 에너빌리티
                                 </label>
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04팀명04 팀명04 팀명04 팀명04 팀명04 팀명04 팀명 04
+                                    <input type="checkbox" class="chk_cont" checked/> 밥캣
                                 </label>
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명05 팀명05 팀명05 팀명05
+                                    <input type="checkbox" class="chk_cont" checked/> 퓨얼셀
                                 </label>
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명06
+                                    <input type="checkbox" class="chk_cont" checked/> 외부 법령
                                 </label>
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
+                                    <input type="checkbox" class="chk_cont" checked/> 추후
                                 </label>
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
+                                    <input type="checkbox" class="chk_cont" checked/> 옵션 추가 시
                                 </label>
                             </li>
                             <li class = "checked type02">
                                 <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 팀명07 팀명07
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="r_cont sel_box">
-                        <div class="header">
-                            <span class="font_bold">프로젝트 :</span>
-                            <span class="counter font_bold"><span class="blue">11</span> / 11</span>
-                        </div>
-                        <ul class="checklist scroll">
-                            <li class="all_chkbox checked">
-                                <label>
-                                    <input type="checkbox" class="chk_all" checked/> 전체
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명01 프로젝트명01
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명03 프로젝트명03
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04 프로젝트명04
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명06
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명07 프로젝트명07
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명08 프로젝트명08
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명09 프로젝트명09 프로젝트명09
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
-                                </label>
-                            </li>
-                            <li class = "checked type02">
-                                <label>
-                                    <input type="checkbox" class="chk_cont" checked/> 프로젝트명10
+                                    <input type="checkbox" class="chk_cont" checked/> 배치 예시
                                 </label>
                             </li>
                         </ul>
@@ -388,4 +310,5 @@
     <!-- <section class="chat_main"></section> -->
 </body>
 <script src="/js/chat.js"></script>
+
 </html>
