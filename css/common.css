@@ -11,6 +11,9 @@ html {
 .pc {
     display: block;
 }
+.mo {
+    display: none;
+}
 .dis-no {
     display: none;
 }
@@ -72,12 +75,18 @@ header .ham_menu {
 main {
     font-size: 0;
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1500px) {
     header h1 {
         width: auto;
         border-right: none;
         padding-right: .4rem;
         padding-left: 3rem;
+    }
+    .pc {
+        display: none;
+    }
+    .mo {
+        display: block;
     }
 }
 @media screen and (max-width:768px) {

@@ -212,17 +212,17 @@ checklistContainers.forEach(container => {
 
 // 채팅 영역 하단 채팅 입력 인풋 스타일 스크립트
 // input 요소 선택
-const chatInput = document.querySelector('input[name="chat_sand"]');
-const sandBox = document.querySelector('.sand_box');
+const chatInput = document.querySelector('input[name="chat_send"]');
+const sendBox = document.querySelector('.send_box');
 
-// input에 포커스가 되면 sand_box에 클래스 추가
+// input에 포커스가 되면 send_box에 클래스 추가
 chatInput.addEventListener('focus', () => {
-    sandBox.classList.add('act');
+    sendBox.classList.add('act');
 });
 
-// input에서 포커스가 해제되면 sand_box에서 클래스 제거
+// input에서 포커스가 해제되면 send_box에서 클래스 제거
 chatInput.addEventListener('blur', () => {
-    sandBox.classList.remove('act');
+    sendBox.classList.remove('act');
 });
 
 // 채팅 영역 햄버거 메뉴 스크립트

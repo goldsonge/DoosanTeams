@@ -137,7 +137,6 @@ img {
 
 /* 반응형 */
 html, body{	font-size: 62.5%;}
-.mo {display: none !important;}
 @media screen and (max-width:1800px) {html, body{font-size: 61%; transition: font-size .3s;}}
 @media screen and (max-width:1680px) {html, body{font-size: 58%;}}
 @media screen and (max-width:1440px) {html, body{font-size: 56%;}}
