@@ -75,6 +75,74 @@ header .ham_menu {
 main {
     font-size: 0;
 }
+
+/* 스피너 로딩 */
+.loading_box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* 스피너 컨테이너 */
+.spinner {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+/* 스피너 내부 선 */
+.spinner .line {
+    position: absolute;
+    width: 1.5px;
+    height: 4px;
+    background-color: #3498db;
+    top: 2px;
+    left: 50%;
+    transform-origin: 50% 8px;
+    transform: translateX(-50%) rotate(0deg);
+    animation: spin 1.2s linear infinite;
+}
+/* 각 선의 회전 각도 */
+.spinner .line:nth-child(1) {
+    transform: translateX(-50%) rotate(0deg);
+    animation-delay: 0s;
+}
+.spinner .line:nth-child(2) {
+    transform: translateX(-50%) rotate(45deg);
+    animation-delay: -1.05s;
+}
+.spinner .line:nth-child(3) {
+    transform: translateX(-50%) rotate(90deg);
+    animation-delay: -0.9s;
+}
+.spinner .line:nth-child(4) {
+    transform: translateX(-50%) rotate(135deg);
+    animation-delay: -0.75s;
+}
+.spinner .line:nth-child(5) {
+    transform: translateX(-50%) rotate(180deg);
+    animation-delay: -0.6s;
+}
+.spinner .line:nth-child(6) {
+    transform: translateX(-50%) rotate(225deg);
+    animation-delay: -0.45s;
+}
+.spinner .line:nth-child(7) {
+    transform: translateX(-50%) rotate(270deg);
+    animation-delay: -0.3s;
+}
+.spinner .line:nth-child(8) {
+    transform: translateX(-50%) rotate(315deg);
+    animation-delay: -0.15s;
+}
+/* 스피너 애니메이션 */
+@keyframes spin {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @media screen and (max-width:1500px) {
     header h1 {
         width: auto;

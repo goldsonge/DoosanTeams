@@ -209,31 +209,67 @@ checklistContainers.forEach(container => {
     // 초기 카운터 상태 설정
     updateCounter();
 });
-
+//----------------------------------------------------------------------------------------
 // 채팅 영역 하단 채팅 입력 인풋 스타일 스크립트
-// input 요소 선택
 const chatInput = document.querySelector('input[name="chat_send"]');
 const sendBox = document.querySelector('.send_box');
 
-// input에 포커스가 되면 send_box에 클래스 추가
 chatInput.addEventListener('focus', () => {
     sendBox.classList.add('act');
 });
 
-// input에서 포커스가 해제되면 send_box에서 클래스 제거
 chatInput.addEventListener('blur', () => {
     sendBox.classList.remove('act');
 });
-
+//----------------------------------------------------------------------------------------
 // 채팅 영역 햄버거 메뉴 스크립트
-// 햄버거 메뉴 요소 선택
 const hamburgerMenu = document.querySelector('.ham_menu');
 
-// 클릭 시 햄버거 메뉴와 body에 클래스 추가/제거 (토글)
 hamburgerMenu.addEventListener('click', () => {
-    // 햄버거 메뉴에 active 클래스 토글
     hamburgerMenu.classList.toggle('active');
     
-    // body에 ham_on, ham_off 클래스 토글
     document.body.classList.toggle('ham_act');
+});
+//----------------------------------------------------------------------------------------
+// pdf 영역 관련 스크립트
+document.querySelectorAll('.link_box .pdf_btn').forEach(function(btn) {
+    btn.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        document.querySelector('section.chat_pdf').classList.add('active');
+        document.querySelector('body').classList.add('act_pdf');
+    });
+});
+
+document.querySelector('.close_btn').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    document.querySelector('section.chat_pdf').classList.remove('active');
+    document.querySelector('body').classList.remove('act_pdf');
+});
+//----------------------------------------------------------------------------------------
+// 채팅 의견 말풍선 아이콘 인터렉션
+document.querySelectorAll('.coment_btn .icon_chat').forEach(function(iconChat) {
+    iconChat.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        this.closest('.coment_btn').classList.add('act');
+    });
+});
+
+document.querySelectorAll('.coment_btn .icon_send').forEach(function(iconSend) {
+    iconSend.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        this.closest('.coment_btn').classList.remove('act');
+    });
+});
+//----------------------------------------------------------------------------------------
+// 챗봇 팀 및 프로젝트 카운트 드롭박스
+document.querySelectorAll('.chat_onchat .chat_hd .cont_wr .count_wr .count_box').forEach(function(countBox) {
+    countBox.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        this.closest('.count_wr').classList.toggle('act');
+    });
 });

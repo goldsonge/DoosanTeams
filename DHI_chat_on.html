@@ -235,6 +235,7 @@
                     <span title="팀명1 팀명1 팀명1 팀명1 팀명1" class="cont">팀명1 팀명1 팀명1 팀명1 팀명1 </span>
                     <div class="count_wr">
                         <div class="count_box">
+                            <!-- cont_list 내 컨텐츠 갯수 -->
                             +<span class="count_num">5</span>
                             <img src="./img/icon_arr.png" alt="화살표 아이콘">
                         </div>
@@ -262,10 +263,9 @@
                     </div>
                 </div>
             </div>
+            <!-- scroll 클래스 붙이면 스크롤 스타일 반영 -->
             <div class="t_box flex_box scroll">
-                <!--
-                    
-                -->
+                <!-- chat_list defalut는 사용자 말풍선 ai_chat, type02가 붙으면 ai  -->
                 <div class="user_chat chat_list flex_box">
                     <p class="chat_time">2024-09-05 09:00</p>
                     <div class="chat_box">
@@ -278,6 +278,7 @@
                         CHAT BOT
                         <p class="chat_time">2024-09-05 09:00</p>
                     </div>
+                    <!-- loading_box 블럭만 가져가면 로딩 스타일 사용 가능  -->
                     <div class="chat_box loading_box">
                         <div class="spinner">
                             <div class="line"></div>
@@ -298,6 +299,8 @@
                         <p class="chat_text">(사용자 입력 Prompt 예시) 직원 교육 프로그램에는 어떤 것이 있나요?</p>
                     </div>
                 </div>
+                <!-- pc -> 1500 이상, mo -> 1500 미만 -->
+                 <!-- .chat_onchat .chat_list .chat_box .num_box 숫자 임력시 번호 딱지 생성 가능 -->
                 <div class="ai_chat chat_list flex_box type02">
                     <img src="/img/icon_logo.png" alt="채팅 ai 로고" class="pc">
                     <div class="mo blue chat_name">
@@ -334,6 +337,7 @@
                                 <a href="#" class="link_btn pdf_btn flex_box blue"><span class="num_box">3</span>reference.pdf</a>
                             </div>
                             <div class="btn_box flex_box">
+                                <!-- coment_btn에 act 붙으면 전송 인풋 활성화, 없으면 비활성화 -->
                                 <button type="button" class="flex_box coment_btn">
                                     <input type="text" placeholder="의견을 작성해주세요.">
                                     <img src="./img/icon_send.png" alt="전송 아이콘" class="icon_send">
@@ -409,6 +413,10 @@
             </div>
         </section>
     </main>
+    <!-- 챗봇 pdf 영역 -->
+     <!-- .link_box내에  .pdf_btn 클릭시 body에 act_pdf클래스 추가 후 활성화.  
+        닫아 줄 때에는 해당 섹션에 있는 close 버튼 클릭시 닫기 가능. 
+     -->
     <section class="chat_pdf">
         <div class="tit_box flex_box">
             <span></span>
@@ -419,57 +427,4 @@
     </section>
 </body>
 <script src="/js/chat.js"></script>
-<script>
-
-    // pdf 영역 관련 스크립트
-    // 모든 .pdf_btn 요소에 대해 클릭 이벤트 추가
-    document.querySelectorAll('.link_box .pdf_btn').forEach(function(btn) {
-        btn.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            // section.chat_pdf와 body에 active 클래스 추가
-            document.querySelector('section.chat_pdf').classList.add('active');
-            document.querySelector('body').classList.add('act_pdf');
-        });
-    });
-
-    // close_btn 클릭 이벤트로 .chat_pdf와 main의 active 클래스 제거
-    document.querySelector('.close_btn').addEventListener('click', function(event) {
-        event.preventDefault();
-
-        // section.chat_pdf와 main에서 active 클래스 제거
-        document.querySelector('section.chat_pdf').classList.remove('active');
-        document.querySelector('body').classList.remove('act_pdf');
-    });
-
-    // 채팅 의견 말풍선 아이콘 인터렉션
-    document.querySelectorAll('.coment_btn .icon_chat').forEach(function(iconChat) {
-        iconChat.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            this.closest('.coment_btn').classList.add('act');
-        });
-    });
-
-    document.querySelectorAll('.coment_btn .icon_send').forEach(function(iconSend) {
-        iconSend.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            this.closest('.coment_btn').classList.remove('act');
-        });
-    });
-
-    // 모든 .count_box 요소에 대해 클릭 이벤트 추가
-    document.querySelectorAll('.chat_onchat .chat_hd .cont_wr .count_wr .count_box').forEach(function(countBox) {
-        countBox.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            // 부모 요소 .count_wr에 act 클래스 추가
-            this.closest('.count_wr').classList.toggle('act');
-        });
-    });
-
-
-
-</script>
 </html>

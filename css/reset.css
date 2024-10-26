@@ -123,6 +123,7 @@ img {
 
 /* 스크롤 */
 .scroll {
+	overflow: auto;
     padding-right: .5rem;
 }
 .scroll::-webkit-scrollbar {
