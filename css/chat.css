@@ -6,7 +6,7 @@
     border-right: 1px solid #e0e6eb;
     position: relative;
     background: #fff;
-    z-index: 1;
+    z-index: 10;
     vertical-align: top;
 }
 .chat_history .cont_wr {
@@ -563,6 +563,7 @@ body.act_pdf main {
     top: 0;
     right: -600px; /* 화면 밖으로 이동 */
     transition: transform 0.3s ease;
+    z-index: 11;
 }
 .chat_pdf .tit_box {
     justify-content: space-between;
@@ -585,8 +586,8 @@ body.act_pdf main {
     height: 60px;
 }
 .hr_chat .chat_main{
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -6rem;
     height: calc(100vh - 170px);
 }
 .hr_chat .chat_start .multi_select_box .sel_box {
