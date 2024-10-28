@@ -5,7 +5,7 @@
     width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .project_list .t_box {
@@ -109,22 +109,30 @@
     text-align: left;
 }
 .project_tb tbody tr td .td_button_box.td_tit {
-    width: 650px;
+    display: inline-block;
+    width: 690px;
+    line-height: 48px;
+    padding-right: 40px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.project_tb tbody tr:hover td .td_button_box.td_tit {
+    line-height: 46px;
+}
 .project_tb tbody tr:hover td .td_button_box {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-top: 1px solid #e0e6eb;
     border-left: 1px solid #e0e6eb;
     border-bottom: 1px solid #e0e6eb;
     border-radius: 8px 0 0 8px;
     font-weight: bold;
     background-color: #f9fafb;
+}
+.project_tb tbody tr:hover td .td_button_box:not(.td_tit) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .project_tb tbody tr:hover td .td_button_box.ta_l {
     justify-content: flex-start;
@@ -238,4 +246,22 @@
 }
 .pagination_wr .more_step_btn.act {
     display: block;
+}
+
+/* 분석결과조회 상세 */
+.list_detail .project_list h2.tit {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2.4rem;
+    letter-spacing: -.048rem;
+}
+.list_detail .project_list .table_wr {
+    height: 708px;
+}
+
+@media screen and (max-width:899px) {
+    .project_list .t_box {
+        margin-bottom: 3.5rem;
+    }
+    
 }

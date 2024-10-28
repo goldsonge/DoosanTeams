@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHI_list</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <main>
+        <header class="header flex_box">
+            <h1 class="blue flex_box">
+                <img src="/img/logo.png" alt="logo">DHI
+            </h1>
+            <div class="flex_box">
+                <a href="javascript:void(0)">CHAT BOT</a>
+                <a href="javascript:void(0)" class="act">분석 결과 조회</a>
+            </div>
+        </header>
+        <!-- 챗봇 시작 디폴트 화면 -->
+        <section class="list_main list_detail">
+            <div class="project_list">
+                <h2 class="tit blue">[CODE-004] 프로젝트 004 프로젝트 004</h2>
+                <div class="t_box">
+                    <div class="flex_box search_wr">
+                        <input type="text" placeholder="검색할 프로젝트를 입력하세요.">
+                        <button type="button"><img src="./img/icon_search.png" alt="검색 아이콘"></button>
+                    </div>
+                    <button class="excel_btn flex_box">
+                        <img src="./img/icon_down_act.png" alt="다운로드 아이콘" class="on">
+                        <img src="./img/icon_down.png" alt="다운로드 아이콘" class="off">
+                        엑셀 다운로드
+                    </button>
+                </div>
+                <div class="table_wr scroll">
+                    <table class="project_tb type02">
+                        <colgroup>
+                            <col width="90px" />
+                            <col width="240px" />
+                            <col width="240px" />
+                            <col width="140px" />
+                            <col width="110px" />
+                            <col width="220px" />
+                            <col width="90px" />
+                            <col width="120px" />
+                            <col width="150px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tb_article">조항</th>
+                                <th class="tb_analyze ta_l">분석항목</th>
+                                <th class="tb_ai ta_l">AI 의견</th>
+                                <th class="tb_part">부서</th>
+                                <th class="tb_stat">상태</th>
+                                <th class="tb_manager ta_l">담당자 의견</th>
+                                <th class="tb_user">작성자</th>
+                                <th class="tb_date">작성일</th>
+                                <th class="tb_btn"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><p class="td_button_box">Code-001</p></td>
+                                <td><p class="td_button_box">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
+                                <td><p class="td_button_box"><span class="status complete">완료</span></p></td>
+                                <td><p class="td_button_box">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box">홍길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-002</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">프로젝트 002 프로젝트 002</p></td>
+                                <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-003</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status in_progress">진행중</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-004</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-005</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status request">요청</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-006</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-007</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-008</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-009</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                            <tr onclick="location.href='./DHI_list_detail.html'">
+                                <td><p class="td_button_box">Code-010</p></td>
+                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                <td><p class="td_button_box type03">김길동</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+    <script>
+
+    </script>
+</html>

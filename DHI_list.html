@@ -53,7 +53,7 @@
                     <tbody>
                         <tr onclick="location.href='./DHI_list_detail.html'">
                             <td><p class="td_button_box">Code-001</p></td>
-                            <td><p class="td_button_box ta_l type02 td_tit">프로젝트 001 프로젝트 001</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
                             <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
                             <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
                             <td><p class="td_button_box type03">홍길동</p></td>
@@ -125,7 +125,12 @@
                 </table>
             
                 <ul class="pagination_wr flex_box">
-                    <!--  -->
+                    <!-- 
+                        화살표 - 1페이지씩 이동  
+                        ... = 5페이지씩 이동
+                        1, 10 - 첫페이지와 마지막페이지 이동
+                        현재 페이지 클래스 - more_step_btn , act
+                    -->
                     <li class="step_btn">
                         <a href="#" class="flex_box">
                             <img src="./img/icon_pagination_arr.png" alt="페이지네이션 화살표" class="off">
@@ -171,19 +176,4 @@
         </section>
     </main>
 </body>
-    <script>
-        // .search_wr 요소와 그 내부의 input 요소 선택
-        const searchWrapper = document.querySelector('.search_wr');
-        const searchInput = searchWrapper.querySelector('input');
-
-        // input에 포커스가 올라가면 .search_wr에 act 클래스 추가
-        searchInput.addEventListener('focus', function() {
-            searchWrapper.classList.add('act');
-        });
-
-        // input에서 포커스가 빠져나가면 .search_wr의 act 클래스 제거
-        searchInput.addEventListener('blur', function() {
-            searchWrapper.classList.remove('act');
-        });
-    </script>
 </html>

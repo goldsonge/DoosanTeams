@@ -41,6 +41,11 @@ html {
 /* header */
 header {
     border-bottom: 1px solid #e0e6eb;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+    top: 0;
 }
 header h1 {
     padding: 2.2rem 2rem;
@@ -75,6 +80,7 @@ header .ham_menu {
 }
 main {
     font-size: 0;
+    padding-top: 6rem;
 }
 
 /* 스피너 로딩 */
