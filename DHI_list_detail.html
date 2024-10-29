@@ -133,12 +133,114 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <div class="table-container">
+                        <!-- Table Header -->
+                        <div class="table-row">
+                          <div class="table-cell">조항</div>
+                          <div class="table-cell">분석항목</div>
+                          <div class="table-cell">AI 의견</div>
+                          <div class="table-cell">상태</div>
+                          <div class="table-cell">작성자</div>
+                          <div class="table-cell">작성일</div>
+                          <div class="table-cell">액션</div>
+                        </div>
+                      
+                        <!-- Table Row Example with Expandable Content -->
+                        <div class="table-row">
+                          <div class="table-cell">60.6</div>
+                          <div class="table-cell">항목 설명4 항목 설명4 항목 설명4...</div>
+                          <div class="table-cell">AI 의견 예시 AI 의견 예시...</div>
+                          <div class="table-cell">검토필요</div>
+                          <div class="table-cell">김피코</div>
+                          <div class="table-cell">2024-09-05 11:00</div>
+                          <div class="table-cell">
+                            <button class="toggle-button" onclick="toggleContent(this)">+ 담당자 의견 추가</button>
+                            <button class="edit-button" onclick="toggleEdit(this)">✎</button>
+                          </div>
+                        </div>
+                      
+                        <!-- Expandable Content -->
+                        <div class="expanded-content">
+                          <p>AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
+                          <textarea class="expanded-input">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성...</textarea>
+                        </div>
+                      </div>
+                
+
+                    <style>
+/* Container styling */
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Row and cell styling */
+  .table-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .table-cell {
+    flex: 1;
+    padding: 8px;
+  }
+
+  /* Button styling */
+  .toggle-button, .edit-button {
+    cursor: pointer;
+    background-color: #9b59b6; /* purple */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+
+  .toggle-button:hover, .edit-button:hover {
+    background-color: #8e44ad;
+  }
+
+  /* Hidden row styling */
+  .expanded-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+
+  .expanded-content.active {
+    display: block;
+  }
+
+  .expanded-input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+                    </style>
                 </div>
             </div>
         </section>
     </main>
 </body>
     <script>
+  // Toggle function for expanding content
+  function toggleContent(button) {
+    const content = button.parentNode.parentNode.nextElementSibling;
+    content.classList.toggle('active');
+    button.textContent = content.classList.contains('active') ? "− 담당자 의견 접기" : "+ 담당자 의견 추가";
+  }
+
+  // Toggle function for edit button
+  function toggleEdit(button) {
+    const content = button.parentNode.parentNode.nextElementSibling;
+    content.classList.toggle('active');
+  }
 
     </script>
 </html>
