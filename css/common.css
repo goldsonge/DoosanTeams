@@ -38,6 +38,14 @@ html {
 .font_bold {
     font-weight: 500;
 }
+/* 말줄임
+    대신 max-width나 width를 설정해주어야함.
+*/
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 /* header */
 header {
     border-bottom: 1px solid #e0e6eb;
