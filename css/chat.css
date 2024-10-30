@@ -49,21 +49,23 @@
 }
 
 /* chat_history - Today */
-.chat_history .cont.n1 .chat_cont {
+.chat_history .cont .chat_cont.on {
     border-radius: .4rem;
     border: solid 1px #b8dcff;
     background-color: #ebf5ff;
 }
-.chat_history .cont.n1 .chat_cont .title_input {
+.chat_history .cont .chat_cont.on .title_input {
     font-weight: 500;
     color: #005eb8;
     background-color: #ebf5ff;
 }
-.chat_history .cont.n1 .chat_cont .title_input:focus {
+.chat_history .cont .chat_cont.on .title_input:focus {
     outline: 2px solid #b8dcff;
 }
-.chat_history .cont.n1 .chat_cont .r_box .date {
-    color: #005eb8;
+.chat_history .cont .chat_cont.on .tit,
+.chat_history .cont .chat_cont.on .r_box .date {
+    color: #005eb8 !important;
+    font-weight: 500;
 }
 
 /* chat_history - Today 그 외 */
@@ -74,13 +76,15 @@
     height: 4rem;
     padding: 1.2rem 1rem;
 }
-.chat_history .cont:not(.n1) .chat_cont .tit {
+.chat_history .cont .chat_cont .tit {
     white-space: nowrap;
-    max-width: 15rem;
+    max-width: 11.4rem;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #212931;
     letter-spacing: -.032rem;
+}
+.chat_history .cont:not(.n1) .chat_cont .tit {
+    color: #212931;
 }
 .chat_history .chat_cont .r_box .date {
     font-size: 1.2rem;
@@ -165,7 +169,7 @@
 .chat_main {
     display: inline-block;
     width: calc(100% - 303px);
-    height: calc(100vh - 250px);
+    height: calc(100vh - 270px);
     vertical-align: top;
 }
 .chat_start .t_box {
@@ -384,7 +388,7 @@
     flex-direction: column;
     gap: 3rem;
     max-width: 86rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     height: 100%;
     padding: 0 3rem;
 }
