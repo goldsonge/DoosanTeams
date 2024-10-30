@@ -113,9 +113,6 @@
     width: 690px;
     line-height: 48px;
     padding-right: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 .project_tb tbody tr:hover td .td_button_box.td_tit {
     line-height: 46px;
@@ -164,6 +161,14 @@
     border-radius: 50%;
     background-color: #000;
     margin-top: 5px;
+}
+.status.fail {
+    color: #f14141;
+    border: solid 1px #fcc;
+    background-color: #fff5f5;
+}
+.status.fail::before {
+    background-color: #f14141;
 }
 .status.complete {
     color: #2f9e44;
@@ -249,6 +254,9 @@
 }
 
 /* 분석결과조회 상세 */
+.list_detail .project_list {
+    padding: 0;
+}
 .list_detail .project_list h2.tit {
     font-size: 2.4rem;
     font-weight: bold;
@@ -257,6 +265,45 @@
 }
 .list_detail .project_list .table_wr {
     height: 708px;
+}
+.list_detail .project_tb thead tr th.ta_l:not(.tb_date, .tb_user) {
+    padding-left: 2rem;
+}
+.list_detail .project_tb tbody tr {
+    cursor: s-resize;
+}
+.list_detail .project_tb td {
+    vertical-align: top;
+    padding-top: 2.2rem;
+}
+.list_detail .project_tb tbody tr td p.tb_txt {
+    max-width: 240px;
+    padding: 0 2rem;
+}
+.list_detail .project_tb tbody tr td p.tb_txt.type02 {
+    max-width: 220px;
+    padding: 0 2rem 0 0;
+}
+.list_detail .project_tb tbody tr td p.tb_txt.type03 {
+    max-width: 140px;
+}
+.list_detail .project_tb tbody tr td .tb_user {
+    max-width: 70px;
+}
+.list_detail .project_tb tbody tr td .tb_date {
+    font-size: 1.4rem;
+    padding: 0;   
+}
+.list_detail .project_tb tbody tr.act {
+    height: 170px;
+}
+.list_detail .project_tb tbody tr.act td p{
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+}
+.list_detail .project_tb tbody tr:hover td {
+    background-color: #f9fafb;
 }
 
 @media screen and (max-width:899px) {

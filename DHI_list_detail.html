@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/list.css">
 </head>
 <body>
-    <main>
+    <main class="scroll">
         <header class="header flex_box">
             <h1 class="blue flex_box">
                 <img src="/img/logo.png" alt="logo">DHI
@@ -34,7 +34,7 @@
                         엑셀 다운로드
                     </button>
                 </div>
-                <div class="table_wr scroll">
+                <div class="table_wr">
                     <table class="project_tb type02">
                         <colgroup>
                             <col width="90px" />
@@ -52,195 +52,77 @@
                                 <th class="tb_article">조항</th>
                                 <th class="tb_analyze ta_l">분석항목</th>
                                 <th class="tb_ai ta_l">AI 의견</th>
-                                <th class="tb_part">부서</th>
-                                <th class="tb_stat">상태</th>
+                                <th class="tb_part ta_l">부서</th>
+                                <th class="tb_stat ta_l">상태</th>
                                 <th class="tb_manager ta_l">담당자 의견</th>
-                                <th class="tb_user">작성자</th>
-                                <th class="tb_date">작성일</th>
+                                <th class="tb_user ta_l">작성자</th>
+                                <th class="tb_date ta_l">작성일</th>
                                 <th class="tb_btn"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><p class="td_button_box">Code-001</p></td>
-                                <td><p class="td_button_box">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
-                                <td><p class="td_button_box"><span class="status complete">완료</span></p></td>
-                                <td><p class="td_button_box">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box">홍길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-002</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">프로젝트 002 프로젝트 002</p></td>
-                                <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-003</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status in_progress">진행중</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-004</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-005</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status request">요청</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-006</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-007</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-008</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-009</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
-                            <tr onclick="location.href='./DHI_list_detail.html'">
-                                <td><p class="td_button_box">Code-010</p></td>
-                                <td><p class="td_button_box ta_l type02 td_tit">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
-                                <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                <td><p class="td_button_box type03">김길동</p></td>
-                            </tr>
+                              <tr class="table_tr" onclick="toggleRow(this)">
+                                <td><button type="button">3.1</button></td>
+                                <td><p class="tb_txt ellipsis">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
+                                <td><p class="tb_txt ellipsis">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td><p class="tb_txt type03 ellipsis">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
+                                <td><p class=""><span class="status complete">PASS</span></p></td>
+                                <td><p class="tb_txt type02 ellipsis">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성</p></td>
+                                <td><p class="tb_user ellipsis ta_l">홍길동</p></td>
+                                <td><p class="tb_date">2024-09-05 11:00</p></td>
+                                <td><div class="btn_wr"><button type="button"></button><button type="button"></button><button type="button"></button></div></td>
+                              </tr>
+                              <tr onclick="toggleRow(this)">
+                                <td><p class="">5</p></td>
+                                <td><p class="tb_txt ellipsis">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
+                                <td><p class="tb_txt ellipsis">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td><p class="tb_txt type03 ellipsis">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
+                                <td><p class=""><span class="status fail">FAIL</span></p></td>
+                                <td><p class="tb_txt type02 ellipsis">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성</p></td>
+                                <td><p class="tb_user ellipsis ta_l">김길동</p></td>
+                                <td><p class="tb_date">2024-09-05 11:00</p></td>
+                                <td><div class="btn_wr"><button type="button"></button><button type="button"></button><button type="button"></button></div></td>
+                              </tr>
+                              <tr onclick="toggleRow(this)">
+                                <td><p class="">6</p></td>
+                                <td><p class="tb_txt ellipsis">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
+                                <td><p class="tb_txt ellipsis">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td><p class="tb_txt type03 ellipsis">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
+                                <td><p class=""><span class="status in_progress">진행중</span></p></td>
+                                <td><p class="tb_txt type02 ellipsis">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성</p></td>
+                                <td><p class="tb_user ellipsis ta_l">김길동</p></td>
+                                <td><p class="tb_date">2024-09-05 11:00</p></td>
+                                <td><div class="btn_wr"><button type="button"></button><button type="button"></button><button type="button"></button></div></td>
+                              </tr>
+                              <tr onclick="toggleRow(this)">
+                                <td><p class="">7.3</p></td>
+                                <td><p class="tb_txt ellipsis">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
+                                <td><p class="tb_txt ellipsis">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td><p class="tb_txt type03 ellipsis">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
+                                <td><p class=""><span class="status wait">검토대기</span></p></td>
+                                <td><p class="tb_txt type02 ellipsis">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성</p></td>
+                                <td><p class="tb_user ellipsis ta_l">김길동</p></td>
+                                <td><p class="tb_date">2024-09-05 11:00</p></td>
+                                <td><div class="btn_wr"><button type="button"></button><button type="button"></button><button type="button"></button></div></td>
+                              </tr>
                         </tbody>
                     </table>
-
-                    <div class="table-container">
-                        <!-- Table Header -->
-                        <div class="table-row">
-                          <div class="table-cell">조항</div>
-                          <div class="table-cell">분석항목</div>
-                          <div class="table-cell">AI 의견</div>
-                          <div class="table-cell">상태</div>
-                          <div class="table-cell">작성자</div>
-                          <div class="table-cell">작성일</div>
-                          <div class="table-cell">액션</div>
-                        </div>
-                      
-                        <!-- Table Row Example with Expandable Content -->
-                        <div class="table-row">
-                          <div class="table-cell">60.6</div>
-                          <div class="table-cell">항목 설명4 항목 설명4 항목 설명4...</div>
-                          <div class="table-cell">AI 의견 예시 AI 의견 예시...</div>
-                          <div class="table-cell">검토필요</div>
-                          <div class="table-cell">김피코</div>
-                          <div class="table-cell">2024-09-05 11:00</div>
-                          <div class="table-cell">
-                            <button class="toggle-button" onclick="toggleContent(this)">+ 담당자 의견 추가</button>
-                            <button class="edit-button" onclick="toggleEdit(this)">✎</button>
-                          </div>
-                        </div>
-                      
-                        <!-- Expandable Content -->
-                        <div class="expanded-content">
-                          <p>AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
-                          <textarea class="expanded-input">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성...</textarea>
-                        </div>
-                      </div>
-                
-
-                    <style>
-/* Container styling */
-.table-container {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-  }
-
-  /* Row and cell styling */
-  .table-row {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .table-cell {
-    flex: 1;
-    padding: 8px;
-  }
-
-  /* Button styling */
-  .toggle-button, .edit-button {
-    cursor: pointer;
-    background-color: #9b59b6; /* purple */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    margin: 0 5px;
-  }
-
-  .toggle-button:hover, .edit-button:hover {
-    background-color: #8e44ad;
-  }
-
-  /* Hidden row styling */
-  .expanded-content {
-    display: none;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    background-color: #f9f9f9;
-  }
-
-  .expanded-content.active {
-    display: block;
-  }
-
-  .expanded-input {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    font-size: 14px;
-  }
-                    </style>
                 </div>
             </div>
         </section>
     </main>
 </body>
     <script>
-  // Toggle function for expanding content
-  function toggleContent(button) {
-    const content = button.parentNode.parentNode.nextElementSibling;
-    content.classList.toggle('active');
-    button.textContent = content.classList.contains('active') ? "− 담당자 의견 접기" : "+ 담당자 의견 추가";
-  }
+    // 테이블 토글 active
+    let currentActiveRow = null;
 
-  // Toggle function for edit button
-  function toggleEdit(button) {
-    const content = button.parentNode.parentNode.nextElementSibling;
-    content.classList.toggle('active');
-  }
-
+    function toggleRow(row) {
+      const isActive = row.classList.contains("act");
+      if (isActive) {
+          row.classList.remove("act");
+      } else {
+          row.classList.add("act");
+      }
+    }
     </script>
 </html>
