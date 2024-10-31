@@ -96,6 +96,27 @@
     vertical-align: middle;
     color: #848f9a;
 }
+.project_tb th .btn_wr {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    margin-bottom: 0.3rem;
+}
+.project_tb th .btn_wr .t_box {
+    margin-bottom: .4rem;
+}
+.project_tb th .btn_wr .t_box button .on,
+.project_tb th .btn_wr .b_box button .off {
+    transform: rotate(180deg);
+}
+.project_tb th .btn_wr div button .off,
+.project_tb th .btn_wr div button:hover .on {
+    display: block;
+}
+.project_tb th .btn_wr div button:hover .off,
+.project_tb th .btn_wr div button .on {
+    display: none;
+}
 .project_tb tbody tr {
     cursor: pointer;
 }
@@ -254,6 +275,9 @@
 }
 
 /* 분석결과조회 상세 */
+.list_detail .bd_r {
+    border-right: 1px solid #f3f5f7;
+}
 .list_detail .project_list {
     padding: 0;
 }
@@ -274,15 +298,22 @@
 }
 .list_detail .project_tb td {
     vertical-align: top;
-    padding-top: 2.2rem;
+}
+.list_detail .project_tb td.tb_article {
+    vertical-align: middle;
+}
+.list_detail .project_tb td.td_status {
+    padding-top: 1.4rem;
+}
+.list_detail .project_tb td:not(.td_status) p {
+    padding-top: 1.8rem;
 }
 .list_detail .project_tb tbody tr td p.tb_txt {
     max-width: 240px;
-    padding: 0 2rem;
+    padding: 1.8rem 2rem 0;
 }
 .list_detail .project_tb tbody tr td p.tb_txt.type02 {
     max-width: 220px;
-    padding: 0 2rem 0 0;
 }
 .list_detail .project_tb tbody tr td p.tb_txt.type03 {
     max-width: 140px;
@@ -292,15 +323,44 @@
 }
 .list_detail .project_tb tbody tr td .tb_date {
     font-size: 1.4rem;
-    padding: 0;   
+    padding-right: 0;
 }
 .list_detail .project_tb tbody tr.act {
+    background-color: #f9fafb;
     height: 170px;
+}
+.list_detail .project_tb tbody tr:hover td.tb_article button,
+.list_detail .project_tb tbody tr.act td.tb_article button {
+    font-weight: bold;
+    padding: 1.2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px 0 rgba(0, 42, 82, 0.08);
+    border: solid 1px #b6c2ce;
+    background-color: #fff;
 }
 .list_detail .project_tb tbody tr.act td p{
     white-space: unset;
     overflow: unset;
     text-overflow: unset;
+    overflow-y: auto;
+    height: calc(100% - 22px);
+}
+.list_detail .project_tb tbody tr.act td.tb_analyze,
+.list_detail .project_tb tbody tr.act td.tb_ai {
+    border-right: none;
+}
+.list_detail .project_tb tbody tr.act td.tb_ai p {
+    margin: 1.2rem 0;
+    padding: 1.2rem 1.6rem;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #f3f5f7;
+}
+.list_detail .project_tb tbody tr.act td p::-webkit-scrollbar-thumb{
+    border: .4rem solid #f9fafb;
+}
+.list_detail .project_tb tbody tr.act td.tb_ai p::-webkit-scrollbar-thumb{
+    border: .4rem solid #f3f5f7;
 }
 .list_detail .project_tb tbody tr:hover td {
     background-color: #f9fafb;
