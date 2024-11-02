@@ -136,7 +136,8 @@
     padding-right: 40px;
 }
 .project_tb tbody tr:hover td .td_button_box.td_tit {
-    line-height: 46px;
+    line-height: 52px;
+    vertical-align: middle;
 }
 .project_tb tbody tr:hover td .td_button_box {
     border-top: 1px solid #e0e6eb;
@@ -311,6 +312,7 @@
 .list_detail .project_tb tbody tr td p.tb_txt {
     max-width: 240px;
     padding: 1.8rem 2rem 0;
+    text-align: left;
 }
 .list_detail .project_tb tbody tr td p.tb_txt.type02 {
     max-width: 220px;
@@ -328,6 +330,10 @@
 .list_detail .project_tb tbody tr.act {
     background-color: #f9fafb;
     height: 170px;
+}
+.list_detail .project_tb tbody tr.act td {
+    border-top: 1px solid #E0E6EB;
+    border-bottom: 1px solid #E0E6EB;
 }
 .list_detail .project_tb tbody tr:hover td.tb_article button,
 .list_detail .project_tb tbody tr.act td.tb_article button {

@@ -12,3 +12,23 @@ searchInput.addEventListener('focus', function() {
 searchInput.addEventListener('blur', function() {
     searchWrapper.classList.remove('act');
 });
+
+
+// 리스트 토글
+// 현재 활성화된 행을 저장
+let currentActiveRow = null;
+
+// 클릭 이벤트를 전체 테이블에 위임하여 설정
+document.querySelectorAll(".list_detail tbody tr").forEach(row => {
+    row.addEventListener("click", function(event) {
+        // 클릭한 요소가 특정 td (tb_article 또는 tb_btn)인지 확인
+        const targetClassList = event.target.classList;
+        if (targetClassList.contains("tb_article") || targetClassList.contains("tb_btn" ) || targetClassList.contains("arti_btn" )) {
+            return; // 특정 셀 클릭 시 함수 종료
+        }
+
+        // 활성화 상태에 따라 act 클래스 추가/제거
+        const isActive = row.classList.contains("act");
+        row.classList.toggle("act");
+    });
+});

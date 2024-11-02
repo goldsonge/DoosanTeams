@@ -158,6 +158,30 @@ main {
     }
 }
 
+/* 팝업 */
+.popup_wr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 70%);
+    z-index: 1000;
+}
+.popup_wr .popup_cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 4rem 3rem;
+    border-radius: 8px;
+}
+.popup_wr .popup_cont .cont_inner {
+    max-height: 442px;
+}
+
+
 @media screen and (max-width:1500px) {
     header h1 {
         width: auto;

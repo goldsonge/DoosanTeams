@@ -190,7 +190,7 @@
                         </thead>
                         <tbody>
                               <tr class="table_tr">
-                                <td class="tb_article bd_r"><button type="button" class="arti_btn">3.1</button></td>
+                                <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup01">3.1</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
                                 <td class="tb_ai bd_r"><p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
@@ -201,7 +201,7 @@
                                 <td><div class="btn_wr"><button type="button"></button><button type="button"></button><button type="button"></button></div></td>
                               </tr>
                               <tr>
-                                <td class="tb_article bd_r"><button type="button" class="arti_btn">5</button></td>
+                                <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup02">5</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
                                 <td class="tb_ai bd_r"><p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
@@ -212,7 +212,7 @@
                                 <td><div class="btn_wr"><button type="button"></button><button type="button"></button><button type="button"></button></div></td>
                               </tr>
                               <tr>
-                                <td class="tb_article bd_r"><button type="button" class="arti_btn">6</button></td>
+                                <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup03">6</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
                                 <td class="tb_ai bd_r"><p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
@@ -250,34 +250,108 @@
             </div>
         </section>
     </main>
+    <div class="popup_wr abs dn on">
+        <div class="popup_cont">
+            <div class="pop_wr">
+                <div id="popup01" class="pop_cont n1">
+                    <div class="pop_bg"></div>
+                    <div class="pop_inner">
+                        <div class="cont_header flex_box">
+                            <p class="tit">(조항 명 예시) 60.6</p>
+                            <div class="pop_close">
+                                <img src="./img/icon_close.png" alt="닫기 아이콘">
+                            </div>
+                        </div>
+                        <div class="cont_inner scroll">
+                            <table class="project_tb">
+                                <colgroup>
+                                    <col width="140px" />
+                                    <col width="140px" />
+                                    <col width="350px" />
+                                    <col width="80px" />
+                                    <col width="120px" />
+                                    <col width="110px" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="tb_code">부서</th>
+                                        <th class="tb_stat">검토 결과</th>
+                                        <th class="tb_stat">담당자 의견</th>
+                                        <th class="tb_user">담당자</th>
+                                        <th class="tb_date">작성일</th>
+                                        <th class="tb_btn"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p class="td_button_box">Code-001</p></td>
+                                        <td><p class="td_button_box ta_l type02 ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
+                                        <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
+                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                        <td><p class="td_button_box type03">홍길동</p></td>
+                                        <td><p class="td_button_box type03">홍길동</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p class="td_button_box">Code-002</p></td>
+                                        <td><p class="td_button_box ta_l type02 ellipsis">프로젝트 002 프로젝트 002</p></td>
+                                        <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
+                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p class="td_button_box">Code-003</p></td>
+                                        <td><p class="td_button_box ta_l type02 ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                        <td><p class="td_button_box type02"><span class="status in_progress">진행중</span></p></td>
+                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+<script src="/js/list.js"></script>
     <script>
-    // 현재 활성화된 행을 저장
-    let currentActiveRow = null;
 
-    // 클릭 이벤트를 전체 테이블에 위임하여 설정
-    document.querySelectorAll("tbody tr").forEach(row => {
-        row.addEventListener("click", function(event) {
-            // 클릭한 요소가 특정 td (tb_article 또는 tb_btn)인지 확인
-            const targetClassList = event.target.classList;
-            if (targetClassList.contains("tb_article") || targetClassList.contains("tb_btn" ) || targetClassList.contains("arti_btn" )) {
-                return; // 특정 셀 클릭 시 함수 종료
-            }
+    // 팝업 열기
+    const popOpenButtons = document.querySelectorAll('.arti_btn');
+    const scrollBoxes = document.querySelectorAll(".scroll_box");
 
-            // 활성화 상태에 따라 act 클래스 추가/제거
-            const isActive = row.classList.contains("act");
-            if (isActive) {
-                row.classList.remove("act");
-                currentActiveRow = null;
-            } else {
-                // 현재 활성화된 다른 행이 있다면 비활성화
-                if (currentActiveRow && currentActiveRow !== row) {
-                    currentActiveRow.classList.remove("act");
-                }
-                row.classList.add("act");
-                currentActiveRow = row;
+    for (let i = 0; i < popOpenButtons.length; i++) {
+        popOpenButtons[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            const popupId = this.getAttribute('data-popup');
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.style.display = 'block';
+                popup.classList.add('act');
+                popup.closest('.popup_wr').classList.add('on');
             }
         });
-    });
+    }
+
+
+    // 팝업 닫기
+    const popCloseButtons = document.querySelectorAll('.pop_close, .pop_bg, #sidebar .bg');
+    for (const j = 0; j < popCloseButtons.length; j++) {
+        popCloseButtons[j].addEventListener('click', function () {
+
+            const popupContainer = this.closest('.pop_cont');
+
+            if (popupContainer) {
+                popupContainer.style.display = 'none';
+                popupContainer.classList.remove('act');
+                const parentContainer = this.closest('.cont');
+            }
+        });
+    }
+
     </script>
 </html>

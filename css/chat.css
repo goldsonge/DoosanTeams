@@ -567,7 +567,7 @@ body.act_pdf main {
     top: 0;
     right: -600px; /* 화면 밖으로 이동 */
     transition: transform 0.3s ease;
-    z-index: 11;
+    z-index: 1000;
 }
 .chat_pdf .tit_box {
     justify-content: space-between;
