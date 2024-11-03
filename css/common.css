@@ -159,7 +159,8 @@ main {
 }
 
 /* 팝업 */
-.popup_wr {
+.popup_wr.on {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;

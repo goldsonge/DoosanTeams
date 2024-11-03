@@ -22,9 +22,9 @@ let currentActiveRow = null;
 document.querySelectorAll(".list_detail tbody tr").forEach(row => {
     row.addEventListener("click", function(event) {
         // 클릭한 요소가 특정 td (tb_article 또는 tb_btn)인지 확인
-        const targetClassList = event.target.classList;
-        if (targetClassList.contains("tb_article") || targetClassList.contains("tb_btn" ) || targetClassList.contains("arti_btn" )) {
-            return; // 특정 셀 클릭 시 함수 종료
+        const classesToCheck = ["tb_article", "tb_btn", "arti_btn", "btn_wr", "btn"];
+        if (classesToCheck.some(cls => event.target.classList.contains(cls) || event.target.closest(`.${cls}`))) {
+            return; // 특정 셀 및 그 내부 요소 클릭 시 함수 종료
         }
 
         // 활성화 상태에 따라 act 클래스 추가/제거
