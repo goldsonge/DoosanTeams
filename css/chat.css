@@ -394,6 +394,7 @@
 }
 .chat_onchat .chat_list.type02 {
     align-items: flex-start;
+    margin-right: 4rem;
 }
 .chat_onchat .chat_list .chat_box {
     padding: 1.3rem 2rem;
@@ -536,6 +537,28 @@
 .chat_onchat .ai_chat img {
     width: 3rem;
     height: 3rem;
+}
+.chat_onchat .stop_btn_wr {
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+}
+.chat_onchat .stop_btn_wr .stop_btn {
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.4rem;
+    border-radius: .4rem;
+    border: 1px solid #b8dcff;
+    background: #fff;
+    padding: .75rem 1.2rem;
+}
+.chat_onchat .stop_btn_wr .stop_btn:hover {
+    background-color: #ebf5ff;
+}
+.chat_onchat .stop_btn_wr .stop_btn img {
+    width: auto;
+    height: auto;
+    margin-top: 0 !important;
 }
 .chat_onchat .chat_list.type02 img {
     margin-top: 2.4rem;

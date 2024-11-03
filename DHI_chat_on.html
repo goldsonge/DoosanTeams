@@ -289,19 +289,29 @@
                         CHAT BOT
                         <p class="chat_time">2024-09-05 09:00</p>
                     </div>
-                    <!-- loading_box 블럭만 가져가면 로딩 스타일 사용 가능  -->
-                    <div class="chat_box loading_box">
-                        <div class="spinner">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
+                    <!-- 
+                        loading_box 블럭만 가져가면 로딩 스타일 사용 가능  
+                        하단에 답변 생성 중지 버튼 추가로 해당 태그 구조 변경
+                    -->
+                    <div class="chat_box flex_box stop_btn_wr">
+                        <div class="loading_box">
+                            <div class="spinner">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <p class="chat_text">Generating Answers</p>
                         </div>
-                        <p class="chat_text">Generating Answers</p>
+                        <button type="button" class="stop_btn flex_box blue">
+                            <img src="./img/icon_close_blue.png" alt="중지 아이콘">
+                            답변 생성 중지
+
+                        </button>
                     </div>
                 </div>
                 <div class="user_chat chat_list flex_box">
