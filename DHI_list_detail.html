@@ -189,11 +189,28 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!--
+                                첫번째 tr - 권한 있는 사람이 작성한 tr
+                                두번째 tr - 권한 없는 사람이 작성한 tr
+                                클래스 no_opinion가 있는 tr - tr 내에 아무런 정보가 없고 담당자 의견 추가 버튼만 있는 tr
+                                ai 의견에 이전 의견자가 남긴 이모지의 활성화는 해당 아이콘에 on 클래스 유무로 제어.
+
+                                조항
+                                첫번째, 두번째 tr만 팝업 노출
+                                팝업 노출 조건 - 버튼의 data-popup값과 팝업의 id값을 맞추어 설정하면 노출 가능.
+                                pop_cont에 dis-no 클래스 붙여서 미노출 시킨 다음 팝업 버튼 클릭하면 act 클래스 붙으면서 노출됨.
+                            -->
                               <tr class="table_tr">
                                 <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup01">3.1</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
                                 <td class="tb_ai bd_r">
-                                    <p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
+                                    <p class="tb_txt ellipsis scroll">
+                                        <span class="emoji_box">
+                                            <img src="./img/icon_good.png" alt="좋아요 아이콘" class="on">
+                                            <img src="./img/icon_bad.png" alt="싫어요 아이콘">
+                                        </span>
+                                        AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시
+                                    </p>
                                     <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat"></button><button type="button" class="btn type01"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button><button type="button" class="btn type01"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button></div>
                                 </td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
@@ -206,7 +223,10 @@
                               <tr>
                                 <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup02">5</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
-                                <td class="tb_ai bd_r"><p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td class="tb_ai bd_r">
+                                    <p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
+                                    <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat"></button><button type="button" class="btn type01"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button><button type="button" class="btn type01"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button></div>
+                                </td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
                                 <td class="td_status"><p class=""><span class="status fail">FAIL</span></p></td>
                                 <td class="tb_manager"><p class="tb_txt type02 ellipsis scroll">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성</p></td>
@@ -217,7 +237,10 @@
                               <tr>
                                 <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup03">6</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
-                                <td class="tb_ai bd_r"><p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td class="tb_ai bd_r">
+                                    <p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
+                                    <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat"></button><button type="button" class="btn type01"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button><button type="button" class="btn type01"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button></div>
+                                </td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
                                 <td class="td_status"><p class=""><span class="status in_progress">진행중</span></p></td>
                                 <td class="tb_manager"><p class="tb_txt type02 ellipsis scroll">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성</p></td>
@@ -228,7 +251,10 @@
                               <tr>
                                 <td class="tb_article bd_r"><button type="button" class="arti_btn">7.3</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
-                                <td class="tb_ai bd_r"><p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td class="tb_ai bd_r">
+                                    <p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
+                                    <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat"></button><button type="button" class="btn type01"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button><button type="button" class="btn type01"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button></div>
+                                </td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
                                 <td class="td_status"><p class=""><span class="status wait">검토대기</span></p></td>
                                 <td class="tb_manager"><p class="tb_txt type02 ellipsis scroll">담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성 담당자 의견 작성</p></td>
@@ -236,10 +262,13 @@
                                 <td><p class="tb_date">2024-09-05 11:00</p></td>
                                 <td class="tb_btn"><div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_plus.png" alt="추가 아이콘"></button><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button><button type="button" class="btn type01"><img src="./img/icon_del_gray.png" alt="삭제 아이콘"></button></div></td>
                               </tr>
-                              <tr>
+                              <tr class="no_opinion">
                                 <td class="tb_article bd_r"><button type="button" class="arti_btn">7.3</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
-                                <td class="tb_ai bd_r"><p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p></td>
+                                <td class="tb_ai bd_r">
+                                    <p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
+                                    <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat"></button><button type="button" class="btn type01"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button><button type="button" class="btn type01"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button></div>
+                                </td>
                                 <td></td>
                                 <td class="td_status"></td>
                                 <td class="tb_manager"><button type="button"><img src="./img/icon_plus.png" alt="추가 아이콘"> 담당자 의견 추가</button></td>
@@ -256,11 +285,87 @@
     <div class="popup_wr dis-no">
         <div class="popup_cont">
             <div class="pop_wr">
-                <div id="popup01" class="pop_cont n1">
+                <div id="popup01" class="pop_cont dis-no">
                     <div class="pop_bg"></div>
                     <div class="pop_inner">
                         <div class="cont_header flex_box">
-                            <p class="tit">(조항 명 예시) 60.6</p>
+                            <p class="tit">(조항 명 예시) 3.1</p>
+                            <div class="pop_close">
+                                <img src="./img/icon_close.png" alt="닫기 아이콘">
+                            </div>
+                        </div>
+                        <div class="cont_inner scroll">
+                            <table class="project_tb">
+                                <colgroup>
+                                    <col width="140px" />
+                                    <col width="140px" />
+                                    <col width="350px" />
+                                    <col width="80px" />
+                                    <col width="120px" />
+                                    <col width="110px" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="tb_part">부서</th>
+                                        <th class="tb_stat">검토 결과</th>
+                                        <th class="td_tit">담당자 의견</th>
+                                        <th class="tb_user">담당자</th>
+                                        <th class="tb_date">작성일</th>
+                                        <th class="tb_btn"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tb_part"><p class="ellipsis">부서명1 부서명1 부서명1</p></td>
+                                        <td class="tb_stat">
+                                            <div class="sel_box">
+                                                <div class="sel_selected">선택하세요 <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                <div class="sel_options">
+                                                    <div class="sel_option" data-value="pass">PASS <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="fail">FAIL</div>
+                                                    <div class="sel_option" data-value="pending">PENDING</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tb_tit"><p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
+                                        <td class="tb_user"><p class="ellipsis">홍길동</p></td>
+                                        <td class="tb_date"><p>2024-09-05 11:00</p></td>
+                                        <td class="tb_btn"><div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_part"><p class="ellipsis">부서명1 부서명1 부서명1</p></td>
+                                        <td class="tb_stat"><p><span class="status complete">완료</span></p></td>
+                                        <td class="tb_tit"><p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
+                                        <td class="tb_user"><p class="ellipsis">홍길동</p></td>
+                                        <td class="tb_date"><p>2024-09-05 11:00</p></td>
+                                        <td class="tb_btn"><div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div></td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td><p class="td_button_box">Code-002</p></td>
+                                        <td><p class="td_button_box ta_l type02 ellipsis">프로젝트 002 프로젝트 002</p></td>
+                                        <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
+                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p class="td_button_box">Code-003</p></td>
+                                        <td><p class="td_button_box ta_l type02 ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                                        <td><p class="td_button_box type02"><span class="status in_progress">진행중</span></p></td>
+                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                        <td><p class="td_button_box type03">김길동</p></td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="popup02" class="pop_cont dis-no">
+                    <div class="pop_bg"></div>
+                    <div class="pop_inner">
+                        <div class="cont_header flex_box">
+                            <p class="tit">(조항 명 예시) 5</p>
                             <div class="pop_close">
                                 <img src="./img/icon_close.png" alt="닫기 아이콘">
                             </div>
@@ -323,38 +428,43 @@
 <script src="/js/list.js"></script>
     <script>
 
-    // 팝업 열기
-    const popOpenButtons = document.querySelectorAll('.arti_btn');
+   // 모든 커스텀 셀렉트 박스를 설정
+    document.querySelectorAll('.sel_box').forEach(function(selectBox) {
+        const selected = selectBox.querySelector('.sel_selected');
+        const optionsContainer = selectBox.querySelector('.sel_options');
+        const options = selectBox.querySelectorAll('.sel_option');
 
-    for (let i = 0; i < popOpenButtons.length; i++) {
-        popOpenButtons[i].addEventListener('click', function (e) {
-            e.preventDefault();
-            const popupId = this.getAttribute('data-popup');
-            const popup = document.getElementById(popupId);
-            
-            if (popup) {
-                popup.style.display = 'block';
-                popup.classList.add('act');
-                popup.closest('.popup_wr').classList.add('on');
+        // 셀렉트 박스를 클릭하면 옵션을 표시/숨김
+        selected.addEventListener('click', function(event) {
+            event.stopPropagation(); // 이벤트 버블링 방지
+            closeAllSelectBoxes(selectBox); // 다른 셀렉트 박스 닫기
+            selectBox.classList.toggle('active'); // 현재 셀렉트 박스 열기/닫기
+        });
+
+        // 옵션을 클릭하면 선택 값 표시 및 드롭다운 숨김
+        options.forEach(function(option) {
+            option.addEventListener('click', function() {
+                selected.innerHTML = option.innerHTML;
+                selected.setAttribute('data-selected-value', option.getAttribute('data-value'));
+                selectBox.classList.remove('active'); // 드롭다운 닫기
+            });
+        });
+    });
+
+    // 다른 셀렉트 박스를 닫는 함수
+    function closeAllSelectBoxes(currentBox) {
+        document.querySelectorAll('.sel_box').forEach(function(selectBox) {
+            if (selectBox !== currentBox) {
+                selectBox.classList.remove('active');
             }
         });
     }
 
+    // 페이지의 다른 영역을 클릭하면 모든 드롭다운이 닫히도록 설정
+    document.addEventListener('click', function() {
+        closeAllSelectBoxes();
+    });
 
-    // 팝업 닫기
-    const popCloseButtons = document.querySelectorAll('.pop_close, .popup_wr');
-    for (let j = 0; j < popCloseButtons.length; j++) {
-        popCloseButtons[j].addEventListener('click', function () {
-
-            const popupContainer = this.closest('.pop_cont');
-
-            if (popupContainer) {
-                popupContainer.style.display = 'none';
-                popupContainer.classList.remove('act');
-                popupContainer.closest('.popup_wr').classList.remove('on');
-            }
-        });
-    }
 
     </script>
 </html>

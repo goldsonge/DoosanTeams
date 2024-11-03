@@ -22,7 +22,7 @@ let currentActiveRow = null;
 document.querySelectorAll(".list_detail tbody tr").forEach(row => {
     row.addEventListener("click", function(event) {
         // 클릭한 요소가 특정 td (tb_article 또는 tb_btn)인지 확인
-        const classesToCheck = ["tb_article", "tb_btn", "arti_btn", "btn_wr", "btn"];
+        const classesToCheck = ["tb_article", "btn_wr", "tb_manager"];
         if (classesToCheck.some(cls => event.target.classList.contains(cls) || event.target.closest(`.${cls}`))) {
             return; // 특정 셀 및 그 내부 요소 클릭 시 함수 종료
         }
@@ -32,3 +32,37 @@ document.querySelectorAll(".list_detail tbody tr").forEach(row => {
         row.classList.toggle("act");
     });
 });
+
+
+// 팝업 열기
+const popOpenButtons = document.querySelectorAll('.arti_btn');
+
+for (let i = 0; i < popOpenButtons.length; i++) {
+    popOpenButtons[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        const popupId = this.getAttribute('data-popup');
+        const popup = document.getElementById(popupId);
+        
+        if (popup) {
+            popup.style.display = 'block';
+            popup.classList.add('act');
+            popup.closest('.popup_wr').classList.add('on');
+        }
+    });
+}
+
+
+// 팝업 닫기
+const popCloseButtons = document.querySelectorAll('.pop_close, .popup_wr');
+for (let j = 0; j < popCloseButtons.length; j++) {
+    popCloseButtons[j].addEventListener('click', function () {
+
+        const popupContainer = this.closest('.pop_cont');
+
+        if (popupContainer) {
+            popupContainer.style.display = 'none';
+            popupContainer.classList.remove('act');
+            popupContainer.closest('.popup_wr').classList.remove('on');
+        }
+    });
+}

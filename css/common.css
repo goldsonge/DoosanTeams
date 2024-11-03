@@ -94,7 +94,7 @@ main {
 /* 스피너 로딩 */
 .loading_box {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
 }
 /* 스피너 컨테이너 */
@@ -178,11 +178,128 @@ main {
     padding: 4rem 3rem;
     border-radius: 8px;
 }
+.popup_wr .popup_cont .cont_header {
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.popup_wr .popup_cont .cont_header .tit {
+    font-size: 1.8rem;
+    color: #00101f;
+    font-weight: bold;
+}
+.popup_wr .popup_cont .cont_header .pop_close {
+    margin: -2rem -1rem;
+    cursor: pointer;
+    height: fit-content;
+}
 .popup_wr .popup_cont .cont_inner {
+    min-height: 300px;
     max-height: 442px;
 }
 
-
+/* 팝업 리스트 */
+.pop_wr .project_tb tr {
+    cursor: default;
+}
+.pop_wr .project_tb th,
+.pop_wr .project_tb td {
+    text-align: left;
+}
+.pop_wr .project_tb tr p {
+    color: #354350;
+}
+.pop_wr .project_tb .tb_part p,
+.pop_wr .project_tb .tb_stat p {
+    width: 14rem;
+}
+.pop_wr .project_tb .tb_tit p {
+    max-width: 35rem;
+}
+.pop_wr .project_tb .tb_user p {
+    width: 8rem;
+}
+.pop_wr .project_tb .tb_date p {
+    width: 12rem;
+}
+.pop_wr .project_tb .tb_date p {
+    font-size: 1.4rem;
+}
+.pop_wr .project_tb .tb_btn div {
+    width: 11rem;
+}
+.pop_wr .project_tb .tb_btn .btn_wr {
+    justify-content: center;
+}
+.pop_wr .project_tb .tb_btn .btn_wr .btn {
+    border-radius: 4px;
+    border: 1px solid #e0e6eb;
+    background-color: #fff;
+}
+.pop_wr .project_tb .tb_btn .btn_wr .btn:hover {
+    border-color: #b6c2ce;
+    background-color: #f3f5f7;
+}
+.pop_wr .project_tb .tb_btn .btn_wr .btn.type01 {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.pop_wr .project_tb .sel_box {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    font-family: Arial, sans-serif;
+}
+.pop_wr .project_tb .sel_selected {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pop_wr .project_tb .sel_options {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.pop_wr .project_tb .sel_option {
+    padding: 10px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+.pop_wr .project_tb .sel_option img {
+    display: none;
+}
+.pop_wr .project_tb .sel_option:hover {
+    background-color: #f1f1f1;
+}
+.pop_wr .project_tb .sel_selected[data-selected-value="pass"],
+.pop_wr .project_tb .sel_option[data-value="pass"] {
+    color: #1ac567;
+    font-weight: bold;
+}
+.pop_wr .project_tb .sel_option[data-value="fail"] {
+    color: #ff3b30;
+    font-weight: bold;
+}
+.pop_wr .project_tb .sel_option[data-value="pending"] {
+    color: #ff9500;
+    font-weight: bold;
+}
+.pop_wr .project_tb .sel_box.active .sel_options {
+    display: block;
+}
 @media screen and (max-width:1500px) {
     header h1 {
         width: auto;
