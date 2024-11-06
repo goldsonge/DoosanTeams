@@ -312,7 +312,7 @@
     letter-spacing: -.048rem;
 }
 .list_detail .project_list .table_wr {
-    height: 708px;
+    height: 700px;
 }
 .list_detail .project_tb thead tr th.ta_l:not(.tb_date, .tb_user) {
     padding-left: 2rem;

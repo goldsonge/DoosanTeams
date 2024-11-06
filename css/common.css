@@ -208,6 +208,14 @@ main {
 .pop_wr .project_tb tr p {
     color: #354350;
 }
+.pop_wr .project_tb .tb_tit,
+.pop_wr .project_tb .tb_part {
+    padding: 4px 1rem;
+}
+.pop_wr .project_tb th.tb_stat,
+.pop_wr .project_tb tr:not(.act) .tb_stat {
+    padding-left: 1rem;
+}
 .pop_wr .project_tb .tb_part p,
 .pop_wr .project_tb .tb_stat p {
     width: 14rem;
@@ -247,9 +255,10 @@ main {
     position: relative;
     display: inline-block;
     width: 150px;
-    font-family: Arial, sans-serif;
+    height: 4.4rem;
 }
 .pop_wr .project_tb .sel_selected {
+    height: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -259,6 +268,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
 }
 .pop_wr .project_tb .sel_options {
     display: none;
@@ -284,21 +294,178 @@ main {
 .pop_wr .project_tb .sel_option:hover {
     background-color: #f1f1f1;
 }
-.pop_wr .project_tb .sel_selected[data-selected-value="pass"],
-.pop_wr .project_tb .sel_option[data-value="pass"] {
-    color: #1ac567;
-    font-weight: bold;
+.pop_wr .project_tb .sel_selected span,
+.pop_wr .project_tb .sel_option span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 8.5px 12px;
+    border-radius: 24px;
 }
-.pop_wr .project_tb .sel_option[data-value="fail"] {
-    color: #ff3b30;
-    font-weight: bold;
+.pop_wr .project_tb .sel_selected span{
+    padding: 8.5px 12px 8.5px 0;
 }
-.pop_wr .project_tb .sel_option[data-value="pending"] {
-    color: #ff9500;
-    font-weight: bold;
+.pop_wr .project_tb .sel_selected span::before,
+.pop_wr .project_tb .sel_option span::before {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.pop_wr .project_tb .sel_selected[data-selected-value="wait"] span,
+.pop_wr .project_tb .sel_option[data-value="wait"] span{
+    gap: 1rem;
+    color: #eb8900;
+    border: solid 1px #fd9;
+    background-color: #fffcf0;
+    padding-left: 12px;
+}
+.pop_wr .project_tb .sel_selected[data-selected-value="wait"] span::before,
+.pop_wr .project_tb .sel_option[data-value="wait"] span::before {
+    content: '';
+    background-color: #eb8900;
+}
+.pop_wr .project_tb .sel_selected[data-selected-value="pass"] span,
+.pop_wr .project_tb .sel_option[data-value="pass"] span {
+    gap: 1rem;
+    color: #2f9e44;
+    border: solid 1px #adebb9;
+    background-color: #f2fcf4;
+    padding-left: 12px;
+}
+.pop_wr .project_tb .sel_selected[data-selected-value="pass"] span::before,
+.pop_wr .project_tb .sel_option[data-value="pass"] span::before {
+    content: '';
+    background-color: #2f9e44;
+}
+.pop_wr .project_tb .sel_selected[data-selected-value="fail"] span,
+.pop_wr .project_tb .sel_option[data-value="fail"] span {
+    gap: 1rem;
+    color: #f14141;
+    border: solid 1px #fcc;
+    background-color: #fff5f5;
+    padding-left: 12px;
+}
+.pop_wr .project_tb .sel_selected[data-selected-value="fail"] span::before,
+.pop_wr .project_tb .sel_option[data-value="fail"] span::before {
+    content: '';
+    background-color: #f14141;
 }
 .pop_wr .project_tb .sel_box.active .sel_options {
     display: block;
+}
+.pop_wr .project_tb tr.act td {
+    background-color: #f9fafb;
+}
+.pop_wr .project_tb tr.act td:not(.tb_user, .tb_date) p,
+.pop_wr .project_tb tr.act td .btn_wr:not(.edit_cont),
+.pop_wr .project_tb tr td input,
+.pop_wr .project_tb tr td .sel_box,
+.pop_wr .project_tb tr .tb_btn .edit_cont {
+    display: none;
+}
+.pop_wr .project_tb tr.act .edit_cont {
+    display: block;
+}
+.pop_wr .project_tb tr.act .tb_part,
+.pop_wr .project_tb tr.act .tb_tit {
+    padding-left: 0;
+}
+.pop_wr .project_tb tr.act input {
+    height: 4.4rem;
+    padding: 0 0 0 1rem;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #fff;
+}
+.pop_wr .project_tb tr.act input:focus {
+    outline: solid 1px #b8dcff;
+    background-color: #f5faff;
+}
+.pop_wr .project_tb tr.act .tb_part .edit_cont {
+    width: calc(92% - 1rem);
+}
+.pop_wr .project_tb tr.act .tb_tit .edit_cont {
+    width: calc(100% - 2rem);
+}
+.pop_wr .project_tb tr.act .tb_stat {
+    padding-right: 1rem;
+}
+.pop_wr .project_tb tr.act .tb_btn .edit_cont {
+    display: flex;
+    gap: .6rem;
+}
+.pop_wr .project_tb tr.act .tb_btn .edit_cont button {
+    border: solid 1px #b8dcff;
+    background-color: #fff;
+}
+.pop_wr .project_tb tr.act .tb_btn .edit_cont button:hover {
+    border: solid 1px #b8dcff;
+    background-color: #ebf5ff;
+}
+.pop_wr .cont_inner .cont_box.flex_box {
+    flex-direction: column;
+    gap: 1rem;
+}
+.pop_wr .cont_inner .cont_box.flex_box + .cont_box {
+    margin-top: 2rem;
+}
+.pop_wr .cont_inner .radio-group {
+    display: flex;
+    gap: 10px;
+}
+
+.pop_wr .cont_inner .radio-group label {
+    position: relative;
+    padding: 8px 16px;
+    border: solid 1px #e0e6eb;
+    background-color: #f9fafb;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pop_wr .cont_inner .radio-group input[type="radio"] {
+    display: none;
+}
+
+.pop_wr .cont_inner .radio-group input[type="radio"]:checked + label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    display: block;
+    border-radius: 50%;
+}
+.pop_wr .cont_inner .radio-group input[type="radio"]:checked + label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.pop_wr .cont_inner .radio-group input[value="PASS"]:checked + label {
+    background-color: #f2fcf4;
+    color: #2f9e44;
+    border-color: #adebb9;
+}
+.pop_wr .cont_inner .radio-group input[value="PASS"]:checked + label::before {
+    background-color: #2f9e44;
+}
+.pop_wr .cont_inner .radio-group input[value="FAIL"]:checked + label {
+    background-color: #fff5f5;
+    color: #f14141;
+    border-color: #fcc;
+}
+.pop_wr .cont_inner .radio-group input[value="FAIL"]:checked + label::before {
+    background-color: #f14141;
+}
+.pop_wr .cont_inner .radio-group input[value="REVIEW"]:checked + label {
+    background-color: #fffcf0;
+    color: #eb8900;
+    border-color: #fd9;
+}
+.pop_wr .cont_inner .radio-group input[value="REVIEW"]:checked + label::before {
+    background-color: #eb8900;
 }
 @media screen and (max-width:1500px) {
     header h1 {

@@ -197,7 +197,7 @@
 
                                 조항
                                 첫번째, 두번째 tr만 팝업 노출
-                                팝업 노출 조건 - 버튼의 data-popup값과 팝업의 id값을 맞추어 설정하면 노출 가능.
+                                팝업 노출 조건 - 버튼의 data-popup값과 팝업의 id값을 맞추어 설정하고, 버튼에 arti_btn 클래스 추가하면 노출 가능.
                                 pop_cont에 dis-no 클래스 붙여서 미노출 시킨 다음 팝업 버튼 클릭하면 act 클래스 붙으면서 노출됨.
                             -->
                               <tr class="table_tr">
@@ -235,7 +235,7 @@
                                 <td class="tb_btn"><div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_plus.png" alt="추가 아이콘"></button></div></td>
                               </tr>
                               <tr>
-                                <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup03">6</button></td>
+                                <td class="tb_article bd_r"><button type="button" class="arti_btn">6</button></td>
                                 <td class="tb_analyze bd_r"><p class="tb_txt ellipsis scroll">항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4 항목 설명4</p></td>
                                 <td class="tb_ai bd_r">
                                     <p class="tb_txt ellipsis scroll">AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시</p>
@@ -271,7 +271,7 @@
                                 </td>
                                 <td></td>
                                 <td class="td_status"></td>
-                                <td class="tb_manager"><button type="button"><img src="./img/icon_plus.png" alt="추가 아이콘"> 담당자 의견 추가</button></td>
+                                <td class="tb_manager"><button type="button" data-popup="popup03" class="arti_btn"><img src="./img/icon_plus.png" alt="추가 아이콘"> 담당자 의견 추가</button></td>
                                 <td><p class="tb_user ellipsis ta_l scroll"></p></td>
                                 <td><p class="tb_date"></p></td>
                                 <td class="tb_btn"><div class="btn_wr"><button type="button"></button><button type="button"></button><button type="button"></button></div></td>
@@ -285,6 +285,7 @@
     <div class="popup_wr dis-no">
         <div class="popup_cont">
             <div class="pop_wr">
+                <!-- 조항 팝업 -->
                 <div id="popup01" class="pop_cont dis-no">
                     <div class="pop_bg"></div>
                     <div class="pop_inner">
@@ -308,54 +309,93 @@
                                     <tr>
                                         <th class="tb_part">부서</th>
                                         <th class="tb_stat">검토 결과</th>
-                                        <th class="td_tit">담당자 의견</th>
+                                        <th class="tb_tit">담당자 의견</th>
                                         <th class="tb_user">담당자</th>
                                         <th class="tb_date">작성일</th>
                                         <th class="tb_btn"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="tb_part"><p class="ellipsis">부서명1 부서명1 부서명1</p></td>
+                                    <!-- 
+                                        수정시 버튼 클릭시 tr
+                                        시안 상에서는 담당자 의견 시, 의견 입력 인풋박스가 작성일 영역까지 확장되는데, 
+                                        지난번 미팅에서 말씀드렸던 대로 해당 셀 영역으로 외로 확장시키는 부분은 
+                                        이슈가 있어 담당자의견 셀 안쪽으로만 인풋박스를 넣어 두었습니다.
+                                     -->
+                                    <tr class="act">
+                                        <td class="tb_part">
+                                            <p class="ellipsis">부서명1 부서명1 부서명1</p>
+                                            <input type="text" placeholder="부서명을 입력하세요" class="edit_cont">
+                                        </td>
                                         <td class="tb_stat">
-                                            <div class="sel_box">
-                                                <div class="sel_selected">선택하세요 <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                            <!-- 일반 패치 스타일은 status에 클래스로 제어
+                                                 완료 - complete
+                                                 실패 - fail
+                                                 검토대기 - wait
+                                            -->
+                                            <p><span class="status complete">완료</span></p>
+                                            <div class="sel_box edit_cont">
+                                                <div class="sel_selected"><span>선택하세요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
                                                 <div class="sel_options">
-                                                    <div class="sel_option" data-value="pass">PASS <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
-                                                    <div class="sel_option" data-value="fail">FAIL</div>
-                                                    <div class="sel_option" data-value="pending">PENDING</div>
+                                                    <div class="sel_option" data-value="pass"><span>PASS</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="fail"><span>FAIL</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="wait"><span>검토필요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="tb_tit"><p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
-                                        <td class="tb_user"><p class="ellipsis">홍길동</p></td>
-                                        <td class="tb_date"><p>2024-09-05 11:00</p></td>
-                                        <td class="tb_btn"><div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div></td>
+                                        <td class="tb_tit">
+                                            <p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p>
+                                            <input type="text" placeholder="프로젝트명을 입력하세요" class="edit_cont">
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                        <td class="tb_date">
+                                            <p>2024-09-05 11:00</p>
+                                        </td>
+                                        <td class="tb_btn">
+                                            <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div>
+                                            <div class="btn_wr flex_box edit_cont">
+                                                <button type="button" class="btn type01"><img src="./img/icon_save_blue.png" alt="저장 아이콘"></button>
+                                                <button type="button" class="btn type01"><img src="./img/icon_close_blue.png" alt="취소 아이콘"></button>
+                                            </div>
+                                        </td>
                                     </tr>
+                                    <!-- default tr -->
                                     <tr>
-                                        <td class="tb_part"><p class="ellipsis">부서명1 부서명1 부서명1</p></td>
-                                        <td class="tb_stat"><p><span class="status complete">완료</span></p></td>
-                                        <td class="tb_tit"><p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
-                                        <td class="tb_user"><p class="ellipsis">홍길동</p></td>
-                                        <td class="tb_date"><p>2024-09-05 11:00</p></td>
-                                        <td class="tb_btn"><div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div></td>
+                                        <td class="tb_part">
+                                            <p class="ellipsis">부서명1 부서명1 부서명1</p>
+                                            <input type="text" placeholder="부서명을 입력하세요" class="edit_cont">
+                                        </td>
+                                        <td class="tb_stat">
+                                            <p><span class="status fail">FAIL</span></p>
+                                            <div class="sel_box edit_cont">
+                                                <div class="sel_selected"><span>선택하세요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                <div class="sel_options">
+                                                    <div class="sel_option" data-value="pass"><span>PASS</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="fail"><span>FAIL</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="검토필요"><span>검토필요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p>
+                                            <input type="text" placeholder="프로젝트명을 입력하세요" class="edit_cont">
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                        <td class="tb_date">
+                                            <p>2024-09-05 11:00</p>
+                                        </td>
+                                        <td class="tb_btn">
+                                            <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div>
+                                            <div class="btn_wr flex_box edit_cont">
+                                                <button type="button" class="btn type01"><img src="./img/icon_save_blue.png" alt="저장 아이콘"></button>
+                                                <button type="button" class="btn type01"><img src="./img/icon_close_blue.png" alt="취소 아이콘"></button>
+                                            </div>
+                                        </td>
                                     </tr>
-                                    <!-- <tr>
-                                        <td><p class="td_button_box">Code-002</p></td>
-                                        <td><p class="td_button_box ta_l type02 ellipsis">프로젝트 002 프로젝트 002</p></td>
-                                        <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
-                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p class="td_button_box">Code-003</p></td>
-                                        <td><p class="td_button_box ta_l type02 ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                        <td><p class="td_button_box type02"><span class="status in_progress">진행중</span></p></td>
-                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -382,41 +422,147 @@
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th class="tb_code">부서</th>
+                                        <th class="tb_part">부서</th>
                                         <th class="tb_stat">검토 결과</th>
-                                        <th class="tb_stat">담당자 의견</th>
+                                        <th class="tb_tit">담당자 의견</th>
                                         <th class="tb_user">담당자</th>
                                         <th class="tb_date">작성일</th>
                                         <th class="tb_btn"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><p class="td_button_box">Code-001</p></td>
-                                        <td><p class="td_button_box ta_l type02 ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
-                                        <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
-                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                        <td><p class="td_button_box type03">홍길동</p></td>
-                                        <td><p class="td_button_box type03">홍길동</p></td>
+                                    <!-- 
+                                        수정시 버튼 클릭시 tr
+                                        시안 상에서는 담당자 의견 시, 의견 입력 인풋박스가 작성일 영역까지 확장되는데, 
+                                        지난번 미팅에서 말씀드렸던 대로 해당 셀 영역으로 외로 확장시키는 부분은 
+                                        이슈가 있어 담당자의견 셀 안쪽으로만 인풋박스를 넣어 두었습니다.
+                                     -->
+                                    <tr class="act">
+                                        <td class="tb_part">
+                                            <p class="ellipsis">부서명1 부서명1 부서명1</p>
+                                            <input type="text" placeholder="부서명을 입력하세요" class="edit_cont">
+                                        </td>
+                                        <td class="tb_stat">
+                                            <!-- 일반 패치 스타일은 status에 클래스로 제어
+                                                 완료 - complete
+                                                 실패 - fail
+                                                 검토대기 - wait
+                                            -->
+                                            <p><span class="status complete">완료</span></p>
+                                            <div class="sel_box edit_cont">
+                                                <div class="sel_selected"><span>선택하세요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                <div class="sel_options">
+                                                    <div class="sel_option" data-value="pass"><span>PASS</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="fail"><span>FAIL</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="wait"><span>검토필요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p>
+                                            <input type="text" placeholder="프로젝트명을 입력하세요" class="edit_cont">
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                        <td class="tb_date">
+                                            <p>2024-09-05 11:00</p>
+                                        </td>
+                                        <td class="tb_btn">
+                                            <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div>
+                                            <div class="btn_wr flex_box edit_cont">
+                                                <button type="button" class="btn type01"><img src="./img/icon_save_blue.png" alt="저장 아이콘"></button>
+                                                <button type="button" class="btn type01"><img src="./img/icon_close_blue.png" alt="취소 아이콘"></button>
+                                            </div>
+                                        </td>
                                     </tr>
+                                    <!-- default tr -->
                                     <tr>
-                                        <td><p class="td_button_box">Code-002</p></td>
-                                        <td><p class="td_button_box ta_l type02 ellipsis">프로젝트 002 프로젝트 002</p></td>
-                                        <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
-                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p class="td_button_box">Code-003</p></td>
-                                        <td><p class="td_button_box ta_l type02 ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
-                                        <td><p class="td_button_box type02"><span class="status in_progress">진행중</span></p></td>
-                                        <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
-                                        <td><p class="td_button_box type03">김길동</p></td>
+                                        <td class="tb_part">
+                                            <p class="ellipsis">부서명1 부서명1 부서명1</p>
+                                            <input type="text" placeholder="부서명을 입력하세요" class="edit_cont">
+                                        </td>
+                                        <td class="tb_stat">
+                                            <p><span class="status fail">FAIL</span></p>
+                                            <div class="sel_box edit_cont">
+                                                <div class="sel_selected"><span>선택하세요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                <div class="sel_options">
+                                                    <div class="sel_option" data-value="pass"><span>PASS</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="fail"><span>FAIL</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                    <div class="sel_option" data-value="검토필요"><span>검토필요</span> <img src="./img/icon_arr.png" alt="화살표 아이콘"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ta_l ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p>
+                                            <input type="text" placeholder="프로젝트명을 입력하세요" class="edit_cont">
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                        <td class="tb_date">
+                                            <p>2024-09-05 11:00</p>
+                                        </td>
+                                        <td class="tb_btn">
+                                            <div class="btn_wr flex_box"><button type="button" class="btn type01"><img src="./img/icon_edit_gray.png" alt="수정 아이콘"></button></div>
+                                            <div class="btn_wr flex_box edit_cont">
+                                                <button type="button" class="btn type01"><img src="./img/icon_save_blue.png" alt="저장 아이콘"></button>
+                                                <button type="button" class="btn type01"><img src="./img/icon_close_blue.png" alt="취소 아이콘"></button>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="popup03" class="pop_cont dis-no">
+                    <div class="pop_bg"></div>
+                    <div class="pop_inner">
+                        <div class="cont_header flex_box">
+                            <p class="tit">담당자 의견 추가 및 수정</p>
+                            <div class="pop_close">
+                                <img src="./img/icon_close.png" alt="닫기 아이콘">
+                            </div>
+                        </div>
+                        <div class="cont_inner scroll">
+                            <!-- 부서명 입력 -->
+                             <div class="cont_box flex_box">
+                                 <p class="txt">
+                                    부서명
+                                 </p>
+                                <div class="input-group">
+                                    <label for="department" class="dis-no">부서명</label>
+                                    <input type="text" id="department" placeholder="부서명을 입력하세요.">
+                                </div>
+                             </div>
+
+                            <!-- 상태 라디오 버튼 -->
+                            <div class="cont_box flex_box">
+                                <p class="txt">상태</p>
+                                <div class="radio-group">
+                                    <input type="radio" id="status-pass" name="status" value="PASS">
+                                    <label for="status-pass">PASS</label>
+                            
+                                    <input type="radio" id="status-fail" name="status" value="FAIL">
+                                    <label for="status-fail">FAIL</label>
+                            
+                                    <input type="radio" id="status-review" name="status" value="REVIEW">
+                                    <label for="status-review">검토필요</label>
+                                </div>
+                            </div>
+
+                            <!-- 의견 작성 텍스트영역 -->
+                            <div class="cont_box flex_box">
+                                <p class="txt">의견</p>
+                                <textarea placeholder="의견을 작성하세요."></textarea>
+                            </div>
+
+                            <!-- 버튼 랩퍼 -->
+                            <div class="button-wrap">
+                                <button class="btn-save">저장</button>
+                                <button class="btn-cancel">취소</button>
+                            </div>
                         </div>
                     </div>
                 </div>
