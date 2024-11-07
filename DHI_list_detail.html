@@ -199,6 +199,8 @@
                                 첫번째, 두번째 tr만 팝업 노출
                                 팝업 노출 조건 - 버튼의 data-popup값과 팝업의 id값을 맞추어 설정하고, 버튼에 arti_btn 클래스 추가하면 노출 가능.
                                 pop_cont에 dis-no 클래스 붙여서 미노출 시킨 다음 팝업 버튼 클릭하면 act 클래스 붙으면서 노출됨.
+
+                                맨 아래 담당자 의견 추가 버튼만 팝업 추가해둠
                             -->
                               <tr class="table_tr">
                                 <td class="tb_article bd_r"><button type="button" class="arti_btn" data-popup="popup01">3.1</button></td>
@@ -525,7 +527,7 @@
                                 <img src="./img/icon_close.png" alt="닫기 아이콘">
                             </div>
                         </div>
-                        <div class="cont_inner scroll">
+                        <form class="cont_inner scroll">
                             <!-- 부서명 입력 -->
                              <div class="cont_box flex_box">
                                  <p class="txt">
@@ -560,10 +562,10 @@
 
                             <!-- 버튼 랩퍼 -->
                             <div class="button-wrap">
-                                <button class="btn-save">저장</button>
                                 <button class="btn-cancel">취소</button>
+                                <button class="btn-save">저장</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -432,9 +432,18 @@
     background-color: #f9fafb;
 }
 
+@media screen and (max-width:1400px) {
+    .list_detail .project_list {
+        padding: 0 2rem;
+    }
+    
+}
 @media screen and (max-width:899px) {
     .project_list .t_box {
         margin-bottom: 3.5rem;
+    }
+    .list_detail .project_list .table_wr {
+        height: 687px;
     }
     
 }

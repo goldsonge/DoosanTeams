@@ -411,6 +411,26 @@ main {
 .pop_wr .cont_inner .cont_box.flex_box + .cont_box {
     margin-top: 2rem;
 }
+.pop_wr .cont_inner .input-group input {
+    width: calc(100% - 1rem);
+    height: 4.4rem;
+    padding: 0 0 0 1rem;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #fff;
+}
+.pop_wr .cont_inner textarea {
+    width: 48rem;
+    height: 16rem;
+    resize: none;
+    padding: 1rem;
+    border: solid 1px #e0e6eb;
+}
+.pop_wr .cont_inner .input-group input:focus,
+.pop_wr .cont_inner textarea:focus {
+    outline: solid 1px #b8dcff;
+    background-color: #f5faff;
+}
 .pop_wr .cont_inner .radio-group {
     display: flex;
     gap: 10px;
@@ -467,6 +487,22 @@ main {
 .pop_wr .cont_inner .radio-group input[value="REVIEW"]:checked + label::before {
     background-color: #eb8900;
 }
+.pop_wr .cont_inner .button-wrap {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.pop_wr .cont_inner .button-wrap button {
+    padding: 9px 20px;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    color: #354350;
+}
+.pop_wr .cont_inner .button-wrap button:hover {
+    border-color: #b6c2ce;
+    background-color: #f3f5f7;
+}
 @media screen and (max-width:1500px) {
     header h1 {
         width: auto;
@@ -481,6 +517,11 @@ main {
         display: block;
     }
 }
+@media screen and (max-width:960px) {
+    .popup_wr .popup_cont .cont_inner {
+        max-width: 85rem;
+    }
+}
 @media screen and (max-width:768px) {
     header h1 {
         padding-left: 1.5rem;
@@ -488,5 +529,12 @@ main {
     }
     header div a {
         font-size: 1.5rem;
+    }
+    .popup_wr .popup_cont .cont_inner {
+        max-width: 46rem;
+    }
+    .pop_wr .cont_inner textarea {
+        width: 40rem;
+        height: 14rem;
     }
 }
