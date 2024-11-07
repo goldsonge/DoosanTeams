@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDI_list</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <main>
+        <header class="header flex_box">
+            <h1 class="blue flex_box">
+                <img src="/img/logo.png" alt="logo">DDI
+            </h1>
+        </header>
+        <!-- 챗봇 시작 디폴트 화면 -->
+        <section class="list_main">
+            <div class="project_list">
+                <div class="t_box">
+                    <div class="flex_box search_wr">
+                        <input type="text" placeholder="검색할 프로젝트를 입력하세요.">
+                        <button type="button"><img src="./img/icon_search.png" alt="검색 아이콘"></button>
+                    </div>
+                    <div class="btn_wr flex_box">
+                        <button class="excel_btn flex_box" id="openFormBtn">
+                            <img src="./img/icon_plus.png" alt="더하기 아이콘">
+                            신규 등록
+                        </button>
+                        <button class="excel_btn flex_box">
+                            <img src="./img/icon_down_act.png" alt="다운로드 아이콘" class="on">
+                            <img src="./img/icon_down.png" alt="다운로드 아이콘" class="off">
+                            엑셀 다운로드
+                        </button>
+                    </div>
+                </div>
+                <table class="project_tb">
+                    <colgroup>
+                        <col width="200px" />
+                        <col width="690px" />
+                        <col width="150px" />
+                        <col width="220px" />
+                        <col width="140px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="tb_code">프로젝트 코드</th>
+                            <th class="tb_tit ta_l">프로젝트 명</th>
+                            <th class="tb_stat">분석 상태</th>
+                            <th class="tb_date">분석 요청 시점</th>
+                            <th class="tb_user">작성자</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><p class="td_button_box">Code-001</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001  프로젝트 001 프로젝트 001 프로젝트 001 프로젝트 001</p></td>
+                            <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">홍길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-002</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">프로젝트 002 프로젝트 002</p></td>
+                            <td><p class="td_button_box type02"><span class="status complete">완료</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-003</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status in_progress">진행중</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-004</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-005</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status request">요청</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-006</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-007</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-008</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-009</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="td_button_box">Code-010</p></td>
+                            <td><p class="td_button_box ta_l type02 td_tit ellipsis ellipsis ellipsis ellipsis ellipsis">박스 영역 호버 시 박스 영역 호버 시 박스 영역 호버 시</p></td>
+                            <td><p class="td_button_box type02"><span class="status wait">대기</span></p></td>
+                            <td><p class="td_button_box type02">2024-09-05 11:00</p></td>
+                            <td><p class="td_button_box type03">김길동</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <ul class="pagination_wr flex_box">
+                    <!-- 
+                        화살표 - 1페이지씩 이동  
+                        ... = 5페이지씩 이동
+                        1, 10 - 첫페이지와 마지막페이지 이동
+                        현재 페이지 클래스 - more_step_btn , act
+                    -->
+                    <li class="step_btn">
+                        <a href="#" class="flex_box">
+                            <img src="./img/icon_pagination_arr.png" alt="페이지네이션 화살표" class="off">
+                            <img src="./img/icon_pagination_arr_act.png" alt="페이지네이션 화살표" class="on">
+                        </a>
+                    </li>
+                    <li class="page_current">
+                        <a href="#" class="flex_box">1</a>
+                    </li>
+                    <li class="more_step_btn">
+                        <a href="#" class="flex_box">
+                            <img src="./img/icon_pagination_more.png" alt="더보기 아이콘">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex_box">2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex_box">3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex_box">4</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex_box">5</a>
+                    </li>
+                    <li class="more_step_btn act">
+                        <a href="#" class="flex_box">
+                            <img src="./img/icon_pagination_more.png" alt="더보기 아이콘">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex_box">10</a>
+                    </li>
+                    <li class="step_btn">
+                        <a href="#" class="flex_box">
+                            <img src="./img/icon_pagination_arr.png" alt="페이지네이션 화살표" class="off">
+                            <img src="./img/icon_pagination_arr_act.png" alt="페이지네이션 화살표" class="on">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="projectForm" class="project-form hidden">
+        <div class="form-header">
+            <h2>신규 프로젝트 등록</h2>
+            <button id="closeFormBtn"><img src="img/icon_close.png" alt="닫기 아이콘"></button>
+        </div>
+        <form class="scroll">
+            <div class="radio-group flex_box">
+                <div class="radio_cont">
+                    <input type="radio" id="project-code" name="status" class="custom-radio">
+                    <label for="project-code">프로젝트 코드</label>
+                </div>
+                <div class="radio_cont">
+                    <input type="radio" id="project-name" name="status" class="custom-radio">
+                    <label for="project-name">프로젝트 명</label>
+                </div>
+                <div class="radio_cont">
+                    <input type="radio" id="project-user" name="status" class="custom-radio">
+                    <label for="project-user">담당자</label>
+                </div>
+            </div>
+            <div class="search_wr">
+                <div class="search_box flex_box">
+                    <input type="text" placeholder="검색어를 입력하세요.">
+                    <button type="button" class="arti_btn" data-popup="popup01">검색하기</button>
+                </div>
+            </div>
+            <div class="input_wr">
+                <p class="info_txt">▲ 아래 정보 기입 및 수정 시 검색을 이용하세요.</p>
+                <div class="cont flex_box">
+                    <span>프로젝트 코드</span>
+                    <input type="text" readonly placeholder="상단 검색창에서 프로젝트 코드를 검색하세요.">
+                </div>
+                <div class="cont flex_box">
+                    <span>프로젝트 명</span>
+                    <input type="text" readonly placeholder="상단 검색창에서 프로젝트 명을 검색하세요.">
+                </div>
+                <div class="cont flex_box">
+                    <span>담당자</span>
+                    <input type="text" readonly placeholder="상단 검색창에서 담당자를 검색하세요.">
+                </div>
+            </div>
+            <div class="cont flex_box">
+                <span>고객사</span>
+                <input type="text" placeholder="고객사를 입력하세요.">
+            </div>
+            <div class="file_wr">
+                <span>첨부 파일</span>
+                <div class="file-upload">
+                    <ul class="file-list" id="fileList"></ul>
+                    <label class="upload-label" for="fileInput"><img src="./img/icon_plus.png" alt="더하기 아이콘"></label>
+                    <input type="file" id="fileInput" multiple>
+                </div>
+            </div>
+        </form>
+        <div class="btn_wr flex_box">
+            <button type="button" class="flex_box btn">
+                <div class="loading_box">
+                    <div class="spinner">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <img src="./img/chek_on_01.png" alt="체크 아이콘">
+                </div>
+                AI 검토
+            </button>
+            <button type="button" class="flex_box btn type02">
+                신규 등록
+            </button>
+        </div>
+    </div>
+    <!-- 신규프로젝트 등록 검색 팝업은 popup_cont에 type02 붙여서 사용 -->
+    <div class="popup_wr dis-no">
+        <div class="popup_cont type02">
+            <div class="pop_wr">
+                <div id="popup01" class="pop_cont dis-no">
+                    <div class="pop_bg"></div>
+                    <div class="pop_inner">
+                        <div class="cont_header flex_box">
+                            <div class="pop_close">
+                                <img src="./img/icon_close.png" alt="닫기 아이콘">
+                            </div>
+                        </div>
+                        <div class="radio-group flex_box">
+                            <div class="radio_cont">
+                                <input type="radio" id="project-code02" name="status" class="custom-radio">
+                                <label for="project-code02">프로젝트 코드</label>
+                            </div>
+                            <div class="radio_cont">
+                                <input type="radio" id="project-name02" name="status" class="custom-radio">
+                                <label for="project-name02">프로젝트 명</label>
+                            </div>
+                            <div class="radio_cont">
+                                <input type="radio" id="project-user02" name="status" class="custom-radio">
+                                <label for="project-user02">담당자</label>
+                            </div>
+                        </div>
+                        <div class="search_wr">
+                            <div class="search_box flex_box">
+                                <input type="text" placeholder="검색어를 입력하세요.">
+                                <button type="button" class="arti_btn" data-popup="popup01">검색하기</button>
+                            </div>
+                        </div>
+                        <div class="cont_inner scroll">
+                            <table class="project_tb">
+                                <colgroup>
+                                    <col width="80px" />
+                                    <col width="140px" />
+                                    <col width="340px" />
+                                    <col width="120px" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="tb_chk"></th>
+                                        <th class="tb_code">프로젝트 코드</th>
+                                        <th class="tb_tit">프로젝트 명</th>
+                                        <th class="tb_user">담당자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project01" name="project" class="custom-radio">
+                                            <label for="project01"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project02" name="project" class="custom-radio">
+                                            <label for="project02"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project03" name="project" class="custom-radio">
+                                            <label for="project03"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project04" name="project" class="custom-radio">
+                                            <label for="project04"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project05" name="project" class="custom-radio">
+                                            <label for="project05"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project06" name="project" class="custom-radio">
+                                            <label for="project06"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project07" name="project" class="custom-radio">
+                                            <label for="project07"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tb_chk">
+                                            <input type="radio" id="project08" name="project" class="custom-radio">
+                                            <label for="project08"></label>
+                                        </td>
+                                        <td class="tb_code">
+                                            <p>P00321</p>
+                                        </td>
+                                        <td class="tb_tit">
+                                            <p class="ellipsis">HR 고도화 프로젝트</p>
+                                        </td>
+                                        <td class="tb_user">
+                                            <p class="ellipsis">홍길동</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 선택한 리스트 내용 들어가게 부탁드리겠습니다. -->
+                        <div class="b_box">
+                            <div class="txt_box">
+                                <span>선택 : </span>
+                                <span class="project-code">P00516</span>
+                                <span class="project-name">AI 챗봇 신규 개발</span>
+                                <span class="project-user">홍길동</span>
+                            </div>
+                            <button type="button">적용</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/list.js"></script>
+</html>

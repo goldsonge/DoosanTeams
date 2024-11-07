@@ -66,3 +66,93 @@ for (let j = 0; j < popCloseButtons.length; j++) {
         }
     });
 }
+
+
+   // 모든 커스텀 셀렉트 박스를 설정
+   document.querySelectorAll('.sel_box').forEach(function(selectBox) {
+    const selected = selectBox.querySelector('.sel_selected');
+    const optionsContainer = selectBox.querySelector('.sel_options');
+    const options = selectBox.querySelectorAll('.sel_option');
+
+    // 셀렉트 박스를 클릭하면 옵션을 표시/숨김
+    selected.addEventListener('click', function(event) {
+        event.stopPropagation(); // 이벤트 버블링 방지
+        closeAllSelectBoxes(selectBox); // 다른 셀렉트 박스 닫기
+        selectBox.classList.toggle('active'); // 현재 셀렉트 박스 열기/닫기
+    });
+
+    // 옵션을 클릭하면 선택 값 표시 및 드롭다운 숨김
+    options.forEach(function(option) {
+        option.addEventListener('click', function() {
+            selected.innerHTML = option.innerHTML;
+            selected.setAttribute('data-selected-value', option.getAttribute('data-value'));
+            selectBox.classList.remove('active'); // 드롭다운 닫기
+        });
+    });
+});
+
+// 다른 셀렉트 박스를 닫는 함수
+function closeAllSelectBoxes(currentBox) {
+    document.querySelectorAll('.sel_box').forEach(function(selectBox) {
+        if (selectBox !== currentBox) {
+            selectBox.classList.remove('active');
+        }
+    });
+}
+
+// 페이지의 다른 영역을 클릭하면 모든 드롭다운이 닫히도록 설정
+document.addEventListener('click', function() {
+    closeAllSelectBoxes();
+});
+
+
+ // 신규 프로젝트 등록 폼 스크립트
+ document.querySelectorAll('.input_wr input').forEach(input => {
+    input.addEventListener('click', function() {
+        // 'input_wr' 요소에 'act' 클래스 추가
+        this.closest('.input_wr').classList.add('act');
+    });
+});
+
+
+document.getElementById('openFormBtn').addEventListener('click', function() {
+    document.getElementById('projectForm').classList.add('visible');
+    document.getElementById('overlay').classList.add('visible');
+
+    // 2초 후에 'act' 클래스를 추가
+    setTimeout(function() {
+        document.getElementById('projectForm').classList.add('act');
+    }, 2000);
+});
+
+document.getElementById('closeFormBtn').addEventListener('click', function() {
+    document.getElementById('projectForm').classList.remove('act');
+    document.getElementById('projectForm').classList.remove('visible');
+    document.getElementById('overlay').classList.remove('visible');
+});
+
+// 등록 폼 내에 첨부파일 
+const fileList = document.getElementById('fileList');
+const fileInput = document.getElementById('fileInput');
+
+fileInput.addEventListener('change', function() {
+    Array.from(this.files).forEach(file => {
+        const listItem = document.createElement('li');
+        listItem.setAttribute('data-file-name', file.name);
+
+        const fileNameSpan = document.createElement('span');
+        fileNameSpan.textContent = file.name;
+        fileNameSpan.classList.add('file-name');
+
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('remove-file');
+        removeButton.onclick = () => listItem.remove();
+
+        listItem.appendChild(fileNameSpan);
+        listItem.appendChild(removeButton);
+        fileList.appendChild(listItem);
+    });
+
+    // Clear the input to allow re-uploading of the same file if needed
+    this.value = '';
+});

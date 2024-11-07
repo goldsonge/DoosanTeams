@@ -574,45 +574,4 @@
 
 </body>
 <script src="/js/list.js"></script>
-    <script>
-
-   // 모든 커스텀 셀렉트 박스를 설정
-    document.querySelectorAll('.sel_box').forEach(function(selectBox) {
-        const selected = selectBox.querySelector('.sel_selected');
-        const optionsContainer = selectBox.querySelector('.sel_options');
-        const options = selectBox.querySelectorAll('.sel_option');
-
-        // 셀렉트 박스를 클릭하면 옵션을 표시/숨김
-        selected.addEventListener('click', function(event) {
-            event.stopPropagation(); // 이벤트 버블링 방지
-            closeAllSelectBoxes(selectBox); // 다른 셀렉트 박스 닫기
-            selectBox.classList.toggle('active'); // 현재 셀렉트 박스 열기/닫기
-        });
-
-        // 옵션을 클릭하면 선택 값 표시 및 드롭다운 숨김
-        options.forEach(function(option) {
-            option.addEventListener('click', function() {
-                selected.innerHTML = option.innerHTML;
-                selected.setAttribute('data-selected-value', option.getAttribute('data-value'));
-                selectBox.classList.remove('active'); // 드롭다운 닫기
-            });
-        });
-    });
-
-    // 다른 셀렉트 박스를 닫는 함수
-    function closeAllSelectBoxes(currentBox) {
-        document.querySelectorAll('.sel_box').forEach(function(selectBox) {
-            if (selectBox !== currentBox) {
-                selectBox.classList.remove('active');
-            }
-        });
-    }
-
-    // 페이지의 다른 영역을 클릭하면 모든 드롭다운이 닫히도록 설정
-    document.addEventListener('click', function() {
-        closeAllSelectBoxes();
-    });
-
-
-    </script>
 </html>

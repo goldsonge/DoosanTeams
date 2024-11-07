@@ -13,6 +13,9 @@
     justify-content: space-between;
     margin-bottom: 4rem;
 }
+.project_list .t_box .btn_wr {
+    gap: 1rem;
+}
 .search_wr {
     padding: .7rem 2rem .8rem;
     width: 48rem;
@@ -42,8 +45,10 @@
     background-color: #fff;
     cursor: pointer;
     gap: .8rem;
+    justify-content: center;
     align-items: center;
     position: relative;
+    min-width: 16rem;
 }
 .excel_btn::before {
     content: '';
@@ -224,7 +229,6 @@
 .status.request::before {
     background-color: #6933ff;
 }
-
 
 .pagination_wr {
     align-items: center;
@@ -431,7 +435,347 @@
 .list_detail .project_tb tbody tr:hover td {
     background-color: #f9fafb;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998; /* 폼보다 낮고 다른 컨텐츠보다는 높아야 함 */
+    display: none; /* 초기에는 숨김 */
+}
 
+.overlay.visible {
+    display: block; /* 폼 활성화 시 표시 */
+}
+.project-form form {
+    height: calc(100vh - 17.5rem);
+    padding: 0 3rem;
+}
+.project-form {
+    position: fixed;
+    top: 0;
+    right: -100%; /* 처음에 화면 밖에 위치 */
+    width: 540px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+}
+.project-form.visible {
+    right: 0; /* 슬라이드 인되도록 위치 변경 */
+    z-index: 9999;
+}
+.project-form .form-header {
+    border-bottom: 1px solid #e0e6eb;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+.project-form .form-header h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #005eb8;
+}
+.project-form .radio-group {
+    margin-top: 5rem;
+    gap: 1.6rem;
+}
+.project-form .radio-group .radio_cont {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.custom-radio {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #848f9a;
+    background-color: #fff;
+    border-radius: 4px; /* 네모난 모양 */
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+}
+.custom-radio + label {
+    color: #848f9a;
+    cursor: pointer;
+}
+
+.custom-radio:checked {
+    background-color: #fff; /* 내부 파란색 */
+    border-color: #005eb8;
+}
+.custom-radio:checked + label {
+    color: #005eb8;
+}
+.custom-radio:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #005eb8;
+    transform: translate(-50%, -50%);
+}
+.project-form .search_wr {
+    width: 100%;
+    padding: .4rem .4rem .4rem 2rem;
+    margin-top: 1.6rem;
+}
+.project-form .search_wr input {
+    width: calc(100% - 140px);
+}
+.project-form .search_wr button {
+    width: 140px;
+    padding: 1.5rem 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #005eb8;
+    color: #fff;
+}
+.project-form .search_wr button:hover {
+    background-color: #004485;
+}
+.project-form .input_wr {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e0e6eb66;
+}
+.project-form .input_wr .info_txt {
+    margin-bottom: 2rem;
+    color: #848f9a;
+}
+.project-form .input_wr.act .info_txt {
+    color: #f14141;
+}
+.project-form .input_wr .cont,
+.project-form .cont {
+    flex-direction: column;
+    gap: 1rem;
+}
+.project-form .input_wr .cont input {
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #f3f5f7;
+    padding: 1.4rem 2rem;
+}
+.project-form .input_wr .cont + .cont {
+    margin-top: 2rem;
+}
+.project-form .input_wr .cont input:focus {
+    outline: none;
+}
+.project-form .input_wr .cont input::placeholder {
+    color: #b6c2ce;
+}
+.project-form .input_wr + .cont {
+    margin-top: 3rem;
+}
+.project-form .cont input {
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    padding: 1.4rem 2rem;
+}
+.project-form .cont input:focus {
+    outline: none;
+} 
+.file_wr {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.file-upload {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 4.8rem;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.upload-label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    background-color: #fff;
+    cursor: pointer;
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 10px 0;
+}
+
+.file-list li {
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: solid 1px #e0e6eb;
+    gap: .8rem;
+}
+
+.file-name {
+    flex-grow: 1;
+}
+
+.remove-file {
+    background: url(../img/icon_close.png) 0 0 no-repeat;
+    color: #fff;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-size: contain;
+}
+.project-form .btn_wr {
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+.project-form.act .btn_wr button .loading_box .spinner,
+.project-form .btn_wr button .loading_box img {
+    display: none;
+}
+.project-form.act .btn_wr button .loading_box img {
+    display: block;
+}
+.project-form .btn_wr button {
+    align-items: center;
+    justify-content: center;
+}
+.project-form .btn_wr button {
+    padding: 2rem 0;
+}
+.project-form .btn_wr .btn {
+    border-radius: 8px;
+    border: solid 1px #0078eb;
+    background-color: #fff;
+    gap: .8rem;
+    width: 29%;
+    font-size: 500;
+}
+.project-form .btn_wr .btn:hover {
+    background-color: #ebf5ff;
+}
+.project-form .btn_wr .btn.type02 {
+    width: 70%;
+    background-color: #0078eb;
+    color: #fff;
+    font-weight: bold;
+}
+.project-form .btn_wr .btn.type02:hover {
+    background-color: #005eb8;
+}
+.popup_cont.type02 {
+    padding: 2rem 3rem;
+}
+.popup_cont.type02 .pop_cont .cont_header {
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+.popup_cont.type02 .pop_cont .cont_header .pop_close {
+    margin: 0;
+}
+.popup_cont.type02 .pop_cont .radio-group {
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+.popup_cont.type02 .pop_cont .radio-group .radio_cont {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.popup_cont.type02 .pop_cont .search_wr {
+    padding: .4rem .4rem .4rem 2rem;
+    margin-bottom: 3rem;
+}
+.popup_cont.type02 .pop_cont .search_wr input {
+    width: calc(100% - 140px);
+}
+.popup_cont.type02 .pop_cont .search_wr button {
+    width: 140px;
+    padding: 1.5rem 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #005eb8;
+    color: #fff;
+}
+.popup_cont.type02 .pop_cont .search_wr button:hover {
+    background-color: #004485;
+}
+.popup_cont.type02 .pop_cont .cont_inner {
+    max-height: 36rem;
+}
+.popup_cont.type02 .pop_cont .project_tb td {
+    height: 4.7rem;
+}
+.popup_cont.type02 .pop_cont .project_tb .tb_chk {
+    text-align: center;
+}
+.popup_cont.type02 .pop_cont .b_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.popup_cont.type02 .pop_cont .b_box .txt_box span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #848f9a;
+}
+.popup_cont.type02 .pop_cont .b_box .txt_box span[class^="project-"] {
+    color: #000;
+    margin-left: 1.2rem;
+    position: relative;
+}
+.popup_cont.type02 .pop_cont .b_box .txt_box span[class^="project-"] + span[class^="project-"]::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 16px;
+    position: absolute;
+    left: -.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e0e6eb;
+}
+.popup_cont.type02 .pop_cont .b_box .txt_box span + .project-code {
+    margin-left: 1rem;
+}
+.popup_cont.type02 .pop_cont .b_box button {
+    width: 20rem;
+    padding: 1.85rem 0;
+    border-radius: 8px;
+    background-color: #0078eb;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+.popup_cont.type02 .pop_cont .b_box button:hover {
+    background-color: #005eb8;
+}
 @media screen and (max-width:1400px) {
     .list_detail .project_list {
         padding: 0 2rem;
