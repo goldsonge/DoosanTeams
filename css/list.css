@@ -388,11 +388,7 @@
 .list_detail .project_tb tbody tr:hover td.tb_article button,
 .list_detail .project_tb tbody tr.act td.tb_article button {
     font-weight: bold;
-    padding: 1.2rem 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px 0 rgba(0, 42, 82, 0.08);
-    border: solid 1px #b6c2ce;
-    background-color: #fff;
+    cursor: s-resize;
 }
 .list_detail .project_tb tbody tr.no_opinion td.tb_manager {
     vertical-align: middle;

@@ -22,7 +22,7 @@ let currentActiveRow = null;
 document.querySelectorAll(".list_detail tbody tr").forEach(row => {
     row.addEventListener("click", function(event) {
         // 클릭한 요소가 특정 td (tb_article 또는 tb_btn)인지 확인
-        const classesToCheck = ["tb_article", "btn_wr", "tb_manager"];
+        const classesToCheck = ["btn_wr", "tb_manager"];
         if (classesToCheck.some(cls => event.target.classList.contains(cls) || event.target.closest(`.${cls}`))) {
             return; // 특정 셀 및 그 내부 요소 클릭 시 함수 종료
         }
