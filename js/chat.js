@@ -262,3 +262,12 @@ document.querySelectorAll('.chat_onchat .chat_hd .cont_wr .count_wr .count_box')
         this.closest('.count_wr').classList.toggle('act');
     });
 });
+
+//--------------------------------------------------------------------------------------
+// 채팅 좋아요 싫어요 버튼 활성화
+document.querySelectorAll('button.emoji_btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // 클릭된 버튼에 'act' 클래스가 있으면 제거, 없으면 추가
+        button.classList.toggle('act');
+    });
+});

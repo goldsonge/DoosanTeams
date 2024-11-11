@@ -403,6 +403,9 @@
     border: solid 1px #e0e6eb;
     background-color: #f9fafb;
 }
+.chat_onchat .chat_list .chat_box strong {
+    font-weight: bold;
+}
 .chat_onchat .chat_list.type02 .chat_box {
     padding: 1.9rem 2rem;
 }
@@ -465,6 +468,10 @@
     border-radius: .4rem;
     align-items: center;
     background: #fff;
+}
+.chat_onchat .chat_list .chat_box .btn_box button.emoji_btn.act {
+    border: solid 1px #b8dcff;
+    background-color: #e0f0ff;
 }
 .chat_onchat .chat_list .chat_box .btn_box button:hover,
 .chat_onchat .chat_list .chat_box .btn_box .coment_btn:hover input {
@@ -683,6 +690,9 @@ body.act_pdf main {
     .chat_main .b_box {
         width: 100%;
     }
+    .chat_main {
+        height: calc(100vh - 200px);
+    }
     .chat_start .t_box .b_cont {
         flex-direction: column;
         width: 50%;
@@ -735,7 +745,7 @@ body.act_pdf main {
     }
     .hr_chat .chat_main {
         position: unset;
-        height: calc(100vh - 200px);
+        height: calc(100vh - 160px);
     }
     .hr_chat + .chat_pdf .tit_box {
         height: 54px;
