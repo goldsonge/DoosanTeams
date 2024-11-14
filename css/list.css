@@ -4,7 +4,7 @@
 .project_list {
     width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px 4rem;
     margin-top: 4rem;
 }
 
@@ -141,7 +141,7 @@
     padding-right: 40px;
 }
 .project_tb tbody tr:hover td .td_button_box.td_tit {
-    line-height: 52px;
+    line-height: 49px;
     vertical-align: middle;
 }
 .project_tb tbody tr:hover td .td_button_box {
@@ -728,7 +728,9 @@
     height: 4.7rem;
 }
 .popup_cont.type02 .pop_cont .project_tb .tb_chk {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .popup_cont.type02 .pop_cont .b_box {
     display: flex;

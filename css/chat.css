@@ -58,6 +58,7 @@
     font-weight: 500;
     color: #005eb8;
     background-color: #ebf5ff;
+    border: 1px solid #b8dcff;
 }
 .chat_history .cont .chat_cont.on .title_input:focus {
     outline: 2px solid #b8dcff;
@@ -169,7 +170,7 @@
 .chat_main {
     display: inline-block;
     width: calc(100% - 303px);
-    height: calc(100vh - 270px);
+    height: calc(100vh - 26rem);
     vertical-align: top;
 }
 .chat_start .t_box {
@@ -177,7 +178,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 6rem;
-    height: 100%;
+    height: calc(100vh - 17rem);
 }
 .chat_start .t_box .t_cont {
     align-items: center;
@@ -320,7 +321,9 @@
 
 /* chat_on - 채팅 영역 */
 .chat_onchat .chat_hd {
-    padding: 1.4rem 3rem;
+    height: 6rem;
+    padding: 0 3rem;
+    align-items: center;
     gap: 2rem;
     border-bottom: solid 1px #e0e6eb;
 }
@@ -602,7 +605,7 @@ body.act_pdf main {
 .chat_pdf .tit_box {
     justify-content: space-between;
     border-bottom: 1px solid #e0e6eb;
-    padding: 2.3rem 2.6rem 2.2rem;
+    padding: 2rem 2.6rem;
 }
 .chat_pdf .tit_box h2 {
     font-weight: bold;
@@ -611,13 +614,10 @@ body.act_pdf main {
 /* HR_chat */
 .hr_chat .header {
     border-bottom: none;
+    z-index: 0;
 }
 .hr_chat .header h1 {
-    padding: 1.9rem 2rem;
     border-bottom: 1px solid #e0e6eb;
-}
-.hr_chat .chat_onchat .chat_hd {
-    height: 60px;
 }
 .hr_chat .chat_main{
     position: relative;
@@ -690,9 +690,6 @@ body.act_pdf main {
     .chat_main .b_box {
         width: 100%;
     }
-    .chat_main {
-        height: calc(100vh - 200px);
-    }
     .chat_start .t_box .b_cont {
         flex-direction: column;
         width: 50%;
@@ -703,7 +700,7 @@ body.act_pdf main {
     }
     /* 챗봇 반응형 */
     .chat_onchat .chat_hd {
-        padding: 1.4rem 1.5rem;
+        padding: 0 1.5rem;
     }
     .chat_onchat .chat_hd .cont_wr .cont_tit {
         margin-right: 0;
@@ -733,7 +730,7 @@ body.act_pdf main {
 
     /* HR 챗봇 반응형 */
     .hr_chat .header {
-        height: 54px;
+        height: 6rem;
         border-bottom: 1px solid #e0e6eb;
     }
     .hr_chat .chat_start .t_box .b_cont {
@@ -745,7 +742,7 @@ body.act_pdf main {
     }
     .hr_chat .chat_main {
         position: unset;
-        height: calc(100vh - 160px);
+        height: calc(100vh - 26rem);
     }
     .hr_chat + .chat_pdf .tit_box {
         height: 54px;

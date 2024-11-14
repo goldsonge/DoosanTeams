@@ -56,7 +56,7 @@ header {
     top: 0;
 }
 header h1 {
-    padding: 2.2rem 2rem;
+    padding: 1.9rem 2rem;
     width: 300px;
     border-right: 1px solid #e0e6eb;
     font-size: 2.1rem;
@@ -71,7 +71,7 @@ header div {
 }
 header div a {
     font-size: 1.8rem;
-    line-height: 6rem;
+    line-height: 5.6rem;
     letter-spacing: -.036rem;
     color: #848f9a;
     position: relative;

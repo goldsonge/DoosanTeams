@@ -47,6 +47,7 @@ for (let i = 0; i < popOpenButtons.length; i++) {
             popup.style.display = 'block';
             popup.classList.add('act');
             popup.closest('.popup_wr').classList.add('on');
+            document.querySelector('body').classList.add('scrollLock');
         }
     });
 }
@@ -63,6 +64,7 @@ for (let j = 0; j < popCloseButtons.length; j++) {
             popupContainer.style.display = 'none';
             popupContainer.classList.remove('act');
             popupContainer.closest('.popup_wr').classList.remove('on');
+            document.querySelector('body').classList.remove('scrollLock');
         }
     });
 }
