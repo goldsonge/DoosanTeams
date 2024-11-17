@@ -379,6 +379,8 @@
     padding: 1rem 2rem 0 0;
 }
 .list_detail .project_tb tr.act td.tb_ai .btn_wr .btn {
+    align-items: center;
+    justify-content: center;
     border: 1px solid #b8dcff;
     background: #fff;
 }
@@ -773,6 +775,50 @@
 }
 .popup_cont.type02 .pop_cont .b_box button:hover {
     background-color: #005eb8;
+}
+
+/* 추가 css */
+.btn_box .coment_btn {
+    width: 3.2rem;
+    justify-content: flex-end;
+    transition: width .3s linear;
+    padding: 0;
+}
+.btn_box .coment_btn.act {
+    width: calc(100% - 9.6rem);
+    padding: 0 1rem;
+}
+.btn_box .coment_btn .icon_chat,
+.btn_box .coment_btn.act input,
+.btn_box .coment_btn.act .icon_send {
+    display: block;
+}
+.btn_box .coment_btn.act .icon_chat,
+.btn_box .coment_btn input,
+.btn_box .coment_btn .icon_send {
+    display: none;
+}
+.btn_box .coment_btn input {
+    background: #fff;
+    border: none;
+    font-size: 1.4rem;
+    color: #354350;
+    width: 100%;
+    padding: 0 .7rem;
+}
+.btn_box .coment_btn input::placeholder {
+    color: #b6c2ce;
+}
+.btn_box .coment_btn input:focus{
+    outline: none;
+}
+.btn_box button:hover, 
+.btn_box .coment_btn:hover input {
+    background-color: #ebf5ff;
+}
+.list_detail .project_tb tr.act td.tb_ai .btn_box button.emoji_btn.act {
+    border: solid 1px #b8dcff;
+    background-color: #e0f0ff;
 }
 @media screen and (max-width:1400px) {
     .list_detail .project_list {

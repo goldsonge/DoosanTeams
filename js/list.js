@@ -116,45 +116,74 @@ document.addEventListener('click', function() {
     });
 });
 
-
-document.getElementById('openFormBtn').addEventListener('click', function() {
-    document.getElementById('projectForm').classList.add('visible');
-    document.getElementById('overlay').classList.add('visible');
-
-    // 2초 후에 'act' 클래스를 추가
-    setTimeout(function() {
-        document.getElementById('projectForm').classList.add('act');
-    }, 2000);
-});
-
-document.getElementById('closeFormBtn').addEventListener('click', function() {
-    document.getElementById('projectForm').classList.remove('act');
-    document.getElementById('projectForm').classList.remove('visible');
-    document.getElementById('overlay').classList.remove('visible');
-});
-
-// 등록 폼 내에 첨부파일 
-const fileList = document.getElementById('fileList');
-const fileInput = document.getElementById('fileInput');
-
-fileInput.addEventListener('change', function() {
-    Array.from(this.files).forEach(file => {
-        const listItem = document.createElement('li');
-        listItem.setAttribute('data-file-name', file.name);
-
-        const fileNameSpan = document.createElement('span');
-        fileNameSpan.textContent = file.name;
-        fileNameSpan.classList.add('file-name');
-
-        const removeButton = document.createElement('button');
-        removeButton.classList.add('remove-file');
-        removeButton.onclick = () => listItem.remove();
-
-        listItem.appendChild(fileNameSpan);
-        listItem.appendChild(removeButton);
-        fileList.appendChild(listItem);
+if(document.querySelector('.ddi_list_wr')){
+    document.getElementById('openFormBtn').addEventListener('click', function() {
+        document.getElementById('projectForm').classList.add('visible');
+        document.getElementById('overlay').classList.add('visible');
+    
+        // 2초 후에 'act' 클래스를 추가
+        setTimeout(function() {
+            document.getElementById('projectForm').classList.add('act');
+        }, 2000);
     });
+    
+    document.getElementById('closeFormBtn').addEventListener('click', function() {
+        document.getElementById('projectForm').classList.remove('act');
+        document.getElementById('projectForm').classList.remove('visible');
+        document.getElementById('overlay').classList.remove('visible');
+    });
+    
+    // 등록 폼 내에 첨부파일 
+    const fileList = document.getElementById('fileList');
+    const fileInput = document.getElementById('fileInput');
+    
+    fileInput.addEventListener('change', function() {
+        Array.from(this.files).forEach(file => {
+            const listItem = document.createElement('li');
+            listItem.setAttribute('data-file-name', file.name);
+    
+            const fileNameSpan = document.createElement('span');
+            fileNameSpan.textContent = file.name;
+            fileNameSpan.classList.add('file-name');
+    
+            const removeButton = document.createElement('button');
+            removeButton.classList.add('remove-file');
+            removeButton.onclick = () => listItem.remove();
+    
+            listItem.appendChild(fileNameSpan);
+            listItem.appendChild(removeButton);
+            fileList.appendChild(listItem);
+        });
+    
+        // Clear the input to allow re-uploading of the same file if needed
+        this.value = '';
+    });
+}
 
-    // Clear the input to allow re-uploading of the same file if needed
-    this.value = '';
+
+
+// 의견 말풍선 아이콘 인터렉션
+document.querySelectorAll('.coment_btn .icon_chat').forEach(function(iconChat) {
+    iconChat.addEventListener('click', function(event) {
+        console.log("zzz")
+        event.preventDefault();
+
+        this.closest('.coment_btn').classList.add('act');
+    });
+});
+
+document.querySelectorAll('.coment_btn .icon_send').forEach(function(iconSend) {
+    iconSend.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        this.closest('.coment_btn').classList.remove('act');
+    });
+});
+
+// 좋아요 싫어요 버튼 활성화
+document.querySelectorAll('button.emoji_btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // 클릭된 버튼에 'act' 클래스가 있으면 제거, 없으면 추가
+        button.classList.toggle('act');
+    });
 });
