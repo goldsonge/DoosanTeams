@@ -10,7 +10,7 @@
     vertical-align: top;
 }
 .chat_history .cont_wr {
-    padding: 3rem 0 8rem;
+    padding: 3rem 0;
     max-height: calc(100vh - 19.2rem);
     overflow-y: auto;
     scrollbar-width: none;
@@ -111,6 +111,7 @@
     border: none;
     color: #212931;
     background-color: #f3f5f7;
+    border: solid 1px #e0e6eb;
 }
 .chat_history .chat_cont.act .r_box .btn_box {
     display: flex;
@@ -130,11 +131,9 @@
     width: 100%;
 }
 .chat_history .b_cont .t_box {
-    height: 16rem;
     display: flex;
     align-items: flex-end;
     padding: 2rem;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 50%);
     border-bottom: 1px solid #e0e6eb;
 }
 .chat_history .b_cont .t_box .flex_box {
