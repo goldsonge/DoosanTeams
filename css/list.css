@@ -781,6 +781,16 @@
 }
 
 /* 추가 css */
+.project_list .t_box .l_box {
+    gap: 1rem;
+}
+.project_list .t_box .l_box .excel_btn {
+    padding: .8rem 2.1rem;
+    min-width: unset;
+}
+.project_list .t_box .l_box .excel_btn::before {
+    display: none;
+}
 .btn_box .coment_btn {
     width: 3.2rem;
     justify-content: flex-end;
