@@ -651,6 +651,9 @@
     justify-content: center;
     padding: 3rem;
 }
+.project-form .btn_wr button:disabled {
+    cursor: not-allowed;
+}
 .project-form.act .btn_wr button .loading_box .spinner,
 .project-form .btn_wr button .loading_box img {
     display: none;
@@ -671,9 +674,9 @@
     background-color: #fff;
     gap: .8rem;
     width: 29%;
-    font-size: 500;
+    font-weight: 500;
 }
-.project-form .btn_wr .btn:hover {
+.project-form .btn_wr .btn:not(:disabled):hover {
     background-color: #ebf5ff;
 }
 .project-form .btn_wr .btn.type02 {
@@ -682,7 +685,7 @@
     color: #fff;
     font-weight: bold;
 }
-.project-form .btn_wr .btn.type02:hover {
+.project-form .btn_wr .btn:not(:disabled).type02:hover {
     background-color: #005eb8;
 }
 .popup_cont.type02 {
@@ -822,9 +825,12 @@
 }
 @media screen and (max-width:1400px) {
     .list_detail .project_list {
+        width: 1200px;
         padding: 0 2rem;
     }
-    
+    .list_detail .project_tb tbody tr td p.tb_txt {
+        max-width: 210px;
+    }
 }
 @media screen and (max-width:899px) {
     .project_list .t_box {
