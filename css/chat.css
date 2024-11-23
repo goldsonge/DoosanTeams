@@ -7,7 +7,7 @@
     position: relative;
     background: #fff;
     z-index: 10;
-    vertical-align: top;
+    top: 6rem;
 }
 .chat_history .cont_wr {
     padding: 3rem 0;
@@ -169,7 +169,7 @@
 .chat_main {
     display: inline-block;
     width: calc(100% - 303px);
-    height: calc(100vh - 26rem);
+    height: calc(100vh - 24rem);
     vertical-align: top;
 }
 .chat_start .t_box {
@@ -621,7 +621,7 @@ body.act_pdf main {
 .hr_chat .chat_main{
     position: relative;
     top: -6rem;
-    height: calc(100vh - 170px);
+    height: calc(100vh - 18rem);
 }
 .hr_chat .chat_start .multi_select_box .sel_box {
     width: 66rem;

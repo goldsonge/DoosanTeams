@@ -88,6 +88,9 @@ header .ham_menu {
 }
 main {
     font-size: 0;
+    height: 100vh;
+}
+section:not(.chat_pdf) {
     padding-top: 6rem;
 }
 
