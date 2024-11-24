@@ -357,6 +357,7 @@ section:not(.chat_pdf) {
 }
 .pop_wr .project_tb .sel_box.active .sel_options {
     display: block;
+    max-height: 13rem;
 }
 .pop_wr .project_tb tr.act td {
     background-color: #f9fafb;

@@ -70,20 +70,21 @@ for (let j = 0; j < popCloseButtons.length; j++) {
 }
 
 
-   // 모든 커스텀 셀렉트 박스를 설정
-   document.querySelectorAll('.sel_box').forEach(function(selectBox) {
+// 모든 커스텀 셀렉트 박스를 설정
+document.querySelectorAll('.sel_box').forEach(function(selectBox) {
     const selected = selectBox.querySelector('.sel_selected');
     const optionsContainer = selectBox.querySelector('.sel_options');
     const options = selectBox.querySelectorAll('.sel_option');
 
-    // 셀렉트 박스를 클릭하면 옵션을 표시/숨김
+    // 셀렉트 박스 클릭 시 옵션 표시/숨김
     selected.addEventListener('click', function(event) {
         event.stopPropagation(); // 이벤트 버블링 방지
         closeAllSelectBoxes(selectBox); // 다른 셀렉트 박스 닫기
         selectBox.classList.toggle('active'); // 현재 셀렉트 박스 열기/닫기
+        adjustDropdownPosition(selectBox); // 드롭다운 방향 조정
     });
 
-    // 옵션을 클릭하면 선택 값 표시 및 드롭다운 숨김
+    // 옵션 클릭 시 선택 처리
     options.forEach(function(option) {
         option.addEventListener('click', function() {
             selected.innerHTML = option.innerHTML;
@@ -91,6 +92,27 @@ for (let j = 0; j < popCloseButtons.length; j++) {
             selectBox.classList.remove('active'); // 드롭다운 닫기
         });
     });
+
+    // 드롭다운 방향 조정 함수
+    function adjustDropdownPosition(selectBox) {
+        // 셀렉트 박스의 가장 가까운 스크롤 컨테이너를 기준으로 계산
+        const container = selectBox.closest('.cont_inner'); // 가장 가까운 부모 컨테이너 찾기
+        const containerRect = container.getBoundingClientRect();
+        const selectBoxRect = selectBox.getBoundingClientRect();
+        const dropdownHeight = optionsContainer.offsetHeight;
+
+        // 상단, 하단 여유 공간 계산
+        const spaceBelow = containerRect.bottom - selectBoxRect.bottom; // 아래 여유 공간
+        const spaceAbove = selectBoxRect.top - containerRect.top;       // 위 여유 공간
+
+        if (spaceBelow < dropdownHeight && spaceAbove > dropdownHeight) {
+            // 아래 공간 부족하고 위 공간 충분하면 위로 열기
+            optionsContainer.style.top = `-${dropdownHeight}px`;
+        } else {
+            // 기본: 아래로 열기
+            optionsContainer.style.top = '100%';
+        }
+    }
 });
 
 // 다른 셀렉트 박스를 닫는 함수
