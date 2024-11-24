@@ -833,6 +833,11 @@
     border: solid 1px #b8dcff;
     background-color: #e0f0ff;
 }
+.list_detail .project_tb tr.act td.tb_ai .btn_wr .btn.info_btn {
+    padding: 1rem;
+    gap: .6rem;
+    color: #005eb8;
+}
 @media screen and (max-width:1400px) {
     .list_detail .project_list {
         width: 1200px;

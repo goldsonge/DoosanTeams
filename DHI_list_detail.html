@@ -220,16 +220,8 @@
                                         </span>
                                         AI 의견 예시 AI 의견 예시 AI 의견 예시 AI 의견 예시
                                     </p>
-                                    <div class="btn_box btn_wr flex_box">
-                                        <!-- coment_btn에 act 붙으면 전송 인풋 활성화, 없으면 비활성화 -->
-                                        <!-- emoji_btn에 act 붙으면 활성화, 없으면 비활성화 -->
-                                        <button type="button" class="flex_box coment_btn btn type01">
-                                            <input type="text" placeholder="의견을 작성해주세요.">
-                                            <img src="./img/icon_send.png" alt="전송 아이콘" class="icon_send">
-                                            <img src="./img/icon_chat.png" alt="채팅 아이콘" class="icon_chat">
-                                        </button>
-                                        <button type="button" class="flex_box btn type01 emoji_btn"><img src="./img/icon_good.png" alt="좋아요 아이콘"></button>
-                                        <button type="button" class="flex_box btn type01 emoji_btn"><img src="./img/icon_bad.png" alt="싫어요 아이콘"></button>
+                                    <div class="btn_wr">
+                                        <button type="button" class="flex_box btn info_btn arti_btn" data-popup="popup04"><img src="./img/icon_info.png" alt="Info 아이콘">Info</button>
                                     </div>
                                 </td>
                                 <td><p class="tb_txt type03 ellipsis scroll">부서명4 부서명4 부서명4 부서명4 부서명4 부서명4 부서명4</p></td>
@@ -624,6 +616,33 @@
                                 <button class="btn-save">저장</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div id="popup04" class="pop_cont dis-no">
+                    <div class="pop_bg"></div>
+                    <div class="pop_inner citation_popup">
+                        <div class="cont_header flex_box">
+                            <p class="tit">인용 정보</p>
+                            <div class="pop_close">
+                                <img src="./img/icon_close.png" alt="닫기 아이콘">
+                            </div>
+                        </div>
+                        <div class="cont_inner scroll">
+                            <div class="cont_box">
+                                <div class="flex_box">
+                                    <p class="tit">목차</p>
+                                    <p class="txt">3. 계약 조건</p>
+                                </div>
+                                <div class="flex_box">
+                                    <p class="tit">페이지</p>
+                                    <p class="txt">5</p>
+                                </div>
+                                <div class="flex_box">
+                                    <p class="tit">본문</p>
+                                    <p class="txt">계약 조항 3.2에 대한 검토가 필요합니다.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

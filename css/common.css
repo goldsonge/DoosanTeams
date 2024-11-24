@@ -512,6 +512,27 @@ section:not(.chat_pdf) {
     border-color: #b6c2ce;
     background-color: #f3f5f7;
 }
+.pop_wr .citation_popup {
+    width: 50rem;
+}
+.pop_wr .citation_popup .cont_inner {
+    min-height: unset;
+    height: unset;
+    padding-bottom: 3rem;
+}
+.pop_wr .citation_popup .cont_box .flex_box + .flex_box {
+    margin-top: 1rem;
+}
+.pop_wr .citation_popup .cont_box .tit {
+    color: #848f9a;
+    line-height: 1.75;
+    min-width: 9rem;
+}
+.pop_wr .citation_popup .cont_box .txt {
+    color: #354350;
+    line-height: 1.75;
+}
+
 @media screen and (max-width:1500px) {
     header h1 {
         width: auto;
