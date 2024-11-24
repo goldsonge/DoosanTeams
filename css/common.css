@@ -435,6 +435,11 @@ section:not(.chat_pdf) {
     outline: solid 1px #b8dcff;
     background-color: #f5faff;
 }
+.pop_wr .cont_inner .tb_tit textarea {
+    height: 5.1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.8rem;
+}
 .pop_wr .cont_inner .radio-group {
     display: flex;
     gap: 10px;
