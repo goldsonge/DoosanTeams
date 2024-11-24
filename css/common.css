@@ -533,6 +533,20 @@ section:not(.chat_pdf) {
     line-height: 1.75;
 }
 
+/* 에러페이지 */
+.error_main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+.error_main p {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
 @media screen and (max-width:1500px) {
     header h1 {
         width: auto;
