@@ -187,7 +187,6 @@ if(document.querySelector('.ddi_list_wr')){
 // 의견 말풍선 아이콘 인터렉션
 document.querySelectorAll('.coment_btn .icon_chat').forEach(function(iconChat) {
     iconChat.addEventListener('click', function(event) {
-        console.log("zzz")
         event.preventDefault();
 
         this.closest('.coment_btn').classList.add('act');
@@ -209,3 +208,46 @@ document.querySelectorAll('button.emoji_btn').forEach(button => {
         button.classList.toggle('act');
     });
 });
+
+
+// 리스트 솔팅 스크립트
+document.querySelectorAll('.btn_wr .t_box button, .btn_wr .b_box button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const table = document.querySelector('.project_tb');
+        const columnIndex = Array.from(this.closest('tr').children).indexOf(this.closest('th'));
+
+        let isAscending = false;
+
+        if (this.closest('.t_box')) {
+        isAscending = false;
+        this.classList.add('desc');
+        this.closest('.btn_wr').querySelectorAll('.b_box button').forEach(btn => btn.classList.remove('asc', 'desc'));
+        } else {
+        isAscending = true;
+        this.classList.add('asc');
+        this.closest('.btn_wr').querySelectorAll('.t_box button').forEach(btn => btn.classList.remove('asc', 'desc'));
+        }
+
+        sortTable(table, columnIndex, isAscending);
+    });
+});
+function sortTable(table, columnIndex, ascending) {
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    rows.sort((rowA, rowB) => {
+        const cellA = rowA.cells[columnIndex].textContent.trim();
+        const cellB = rowB.cells[columnIndex].textContent.trim();
+
+        const valA = isNaN(cellA) ? cellA : parseFloat(cellA);
+        const valB = isNaN(cellB) ? cellB : parseFloat(cellB);
+
+        const comparison = typeof valA === 'string' || typeof valB === 'string'
+        ? valA.localeCompare(valB)
+        : (valA - valB);
+
+        return ascending ? comparison : -comparison;
+    });
+
+    rows.forEach(row => tbody.appendChild(row));
+}
