@@ -320,11 +320,17 @@
 
 /* chat_on - 채팅 영역 */
 .chat_onchat .chat_hd {
-    height: 6rem;
-    padding: 0 3rem;
+    height: auto;
+    padding: 1.5rem 3rem;
     align-items: center;
-    gap: 2rem;
     border-bottom: solid 1px #e0e6eb;
+}
+.chat_onchat .chat_hd > .flex_box {
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.chat_onchat .chat_hd .btn_box {
+    display: none;
 }
 .chat_onchat .chat_hd .cont_wr {
     gap: .4rem;
@@ -699,7 +705,21 @@ body.act_pdf main {
     }
     /* 챗봇 반응형 */
     .chat_onchat .chat_hd {
-        padding: 0 1.5rem;
+        padding: 1.5rem;
+        justify-content: space-between;
+    }
+    .chat_onchat .chat_hd .btn_box {
+        display: block;
+        padding: 1rem;
+        border-radius: .4rem;
+        background-color: #0078eb;
+    }
+    .chat_onchat .chat_hd .btn_box:hover {
+        background-color: #005eb8;
+    }
+    .chat_onchat .chat_hd .btn_box button {
+        color: #fff;
+        font-weight: bold;
     }
     .chat_onchat .chat_hd .cont_wr .cont_tit {
         margin-right: 0;
