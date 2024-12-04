@@ -115,10 +115,12 @@
     transform: rotate(180deg);
 }
 .project_tb th .btn_wr div button .off,
-.project_tb th .btn_wr div button:hover .on {
+.project_tb th .btn_wr div button:hover .on,
+.project_tb th .btn_wr div button.act .on {
     display: block;
 }
 .project_tb th .btn_wr div button:hover .off,
+.project_tb th .btn_wr div button.act .off,
 .project_tb th .btn_wr div button .on {
     display: none;
 }

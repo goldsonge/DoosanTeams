@@ -218,14 +218,18 @@ document.querySelectorAll('.btn_wr .t_box button, .btn_wr .b_box button').forEac
 
         let isAscending = false;
 
+        // 모든 버튼에서 'act' 클래스 제거 후 현재 버튼에 추가
+        document.querySelectorAll('.btn_wr button').forEach(btn => btn.classList.remove('act'));
+        this.classList.add('act');
+
         if (this.closest('.t_box')) {
-        isAscending = false;
-        this.classList.add('desc');
-        this.closest('.btn_wr').querySelectorAll('.b_box button').forEach(btn => btn.classList.remove('asc', 'desc'));
+            isAscending = false;
+            this.classList.add('desc');
+            this.closest('.btn_wr').querySelectorAll('.b_box button').forEach(btn => btn.classList.remove('asc', 'desc'));
         } else {
-        isAscending = true;
-        this.classList.add('asc');
-        this.closest('.btn_wr').querySelectorAll('.t_box button').forEach(btn => btn.classList.remove('asc', 'desc'));
+            isAscending = true;
+            this.classList.add('asc');
+            this.closest('.btn_wr').querySelectorAll('.t_box button').forEach(btn => btn.classList.remove('asc', 'desc'));
         }
 
         sortTable(table, columnIndex, isAscending);
